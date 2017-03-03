@@ -12,5 +12,6 @@
  *
  *= require_tree .
  */
+@import "jquery-ui";
 @import "bootstrap-sprockets";
 @import "bootstrap"; 
