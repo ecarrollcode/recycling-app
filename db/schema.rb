@@ -12,25 +12,35 @@
 
 ActiveRecord::Schema.define(version: 20170303014739) do
 
-  create_table "friendly_id_slugs", force: :cascade do |t|
-    t.string   "slug",                      null: false
-    t.integer  "sluggable_id",              null: false
-    t.string   "sluggable_type", limit: 50
-    t.string   "scope"
-    t.datetime "created_at"
-    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
-    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
-    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
-    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+  create_table "Categories", primary_key: "category_id", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name", limit: 40,  null: false
+    t.string "info", limit: 100
   end
 
-  create_table "searches", force: :cascade do |t|
-    t.string   "text"
-    t.string   "zip"
-    t.string   "slug"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["slug"], name: "index_searches_on_slug", unique: true
+  create_table "Cities", primary_key: "city_id", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name",       limit: 30
+    t.string "website",    limit: 200
+    t.string "gps_coords", limit: 50
+  end
+
+  create_table "Items", primary_key: "item_id", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name",             limit: 70, null: false
+    t.string "category",         limit: 70
+    t.string "bin",              limit: 70, null: false
+    t.string "information",      limit: 70
+    t.string "cities",           limit: 70
+    t.string "recycling_plants", limit: 70
+  end
+
+  create_table "MailingList", primary_key: "user_id", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name",  limit: 40, null: false
+    t.string "email", limit: 70
+  end
+
+  create_table "RecyclingPlants", primary_key: "plant_id", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name",        limit: 50,  null: false
+    t.string "plant_hours", limit: 100
+    t.string "gps_coords",  limit: 50
   end
 
 end
