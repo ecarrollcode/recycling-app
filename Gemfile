@@ -17,6 +17,8 @@ end
 gem 'rails', '~> 5.0.1'
 # Use mysql2 as the database for Active Record
 gem 'mysql2'
+# Used to dump data from db into db/seeds.rb
+gem 'seed_dump'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
