@@ -90,16 +90,16 @@ aside {
 
 input[type=text] {
     width: 100%;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
     border: 2px solid #ccc;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 20px;
     background-color: white;
     color: black;
-    background-image: "images/searchicon.png");
+    /*background-image: "images/searchicon.png");*/
     background-position: 10px 10px; 
     background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
+    padding: 12px 12px 12px 12px;
 }
 
 .navbar-default .navbar-header .navbar-brand {
