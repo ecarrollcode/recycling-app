@@ -276,6 +276,33 @@ header .header-content .header-content-inner p {
   -moz-transition: all 0.35s;
   transition: all 0.35s;
 }
+.portfolio-box .portfolio-box-caption .recycle-filter {
+  width: 100%;
+  text-align: top;
+  position: absolute;
+  top: 10%;
+  left: 26%;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  padding: 0 15px;
+}
+.portfolio-box .portfolio-box-caption .compost-filter {
+  width: 100%;
+  text-align: top;
+  position: absolute;
+  top: 10%;
+  left: 41%;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  padding: 0 15px;
+}
+.portfolio-box .portfolio-box-caption .trash-filter {
+  width: 100%;
+  text-align: top;
+  position: absolute;
+  top: 10%;
+  left: 56%;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  padding: 0 15px;
+}
 
 .map-section {
   position: relative;
