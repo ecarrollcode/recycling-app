@@ -47,7 +47,7 @@ p {
 /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
 #map {
-  height: 80%;
+  height: 100%;
   margin-bottom: 0%;
 }
 
@@ -88,6 +88,8 @@ aside {
   transition: all 0.35s;
 }
 
+
+
 input[type=text] {
     width: 100%;
     /*box-sizing: border-box;*/
@@ -100,6 +102,7 @@ input[type=text] {
     background-position: 10px 10px; 
     background-repeat: no-repeat;
     padding: 12px 12px 12px 12px;
+    outline: none;
 }
 
 .navbar-default .navbar-header .navbar-brand {
@@ -140,7 +143,7 @@ input[type=text] {
 }
 @media (min-width: 768px) {
   .navbar-default {
-    background-color: transparent;
+    background-color: black;
     border-color: rgba(255, 255, 255, 0.3);
   }
   .navbar-default .navbar-header .navbar-brand {
@@ -529,10 +532,11 @@ fieldset[disabled] .btn-default.active {
   color: white;
   background-color: #222222;
 }
+/*#eb3812*/
 .btn-primary {
   color: white;
-  background-color: #F05F40;
-  border-color: #F05F40;
+  background-color: rgb(29, 172, 202);
+  border-color: rgb(29, 172, 202);
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
@@ -544,8 +548,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: white;
-  background-color: #ee4b28;
-  border-color: #ed431f;
+  background-color: rgb(32, 191, 223);
+  border-color: rgb(32, 191, 223);
 }
 .btn-primary:active,
 .btn-primary.active,
