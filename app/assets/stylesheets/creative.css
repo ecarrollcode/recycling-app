@@ -379,7 +379,7 @@ header .header-content .header-content-inner p {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('../images/B&W_forest.jpg');
+/*  background-image: url('../images/B&W_forest.jpg');*/
   text-align: center;
   color: white;
 }

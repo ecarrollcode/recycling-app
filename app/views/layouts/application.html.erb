@@ -483,14 +483,48 @@
             <script>
               function initMap() {
                 var uluru = {lat: 34.099972, lng: -117.708281};
+                var r_center_1 = {lat: 34.091373, lng: -117.700089};
+                var r_center_2 = {lat: 34.108001, lng: -117.735477};
+                var r_center_3 = {lat: 34.103936, lng: -117.686841};
                 var map = new google.maps.Map(document.getElementById('map'), {
-                  zoom: 16,
+                  zoom: 15,
                   scrollwheel: false,
                   center: uluru
                 });
-                var marker = new google.maps.Marker({
+                var current = new google.maps.Marker({
                   position: uluru,
+                  animation:google.maps.Animation.BOUNCE,
                   map: map
+                });
+                var center_1 = new google.maps.Marker({
+                  position: r_center_1,
+                  map: map
+                });
+                var center_2 = new google.maps.Marker({
+                  position: r_center_2,
+                  map: map
+                });
+                var center_3 = new google.maps.Marker({
+                  position: r_center_3,
+                  map: map
+                });
+                var infowindow_1 = new google.maps.InfoWindow({
+                  content:"Premises Materials"
+                });
+                var infowindow_2 = new google.maps.InfoWindow({
+                  content:"rePlanet Recycling"
+                });
+                var infowindow_3 = new google.maps.InfoWindow({
+                  content:"Interstate All Battery Center"
+                });
+                google.maps.event.addListener(center_1, 'click', function() {
+                  infowindow_1.open(map,center_1);
+                });
+                google.maps.event.addListener(center_2, 'click', function() {
+                  infowindow_2.open(map,center_2);
+                });
+                google.maps.event.addListener(center_3, 'click', function() {
+                  infowindow_3.open(map,center_3);
                 });
               }
             </script>
