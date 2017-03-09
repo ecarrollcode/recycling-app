@@ -384,6 +384,11 @@ header .header-content .header-content-inner p {
   color: white;
 }
 
+.map-bar{
+  position: relative;
+  width: 100%;
+  background-color: rgb(66,244,173);
+}
 
 .some-padding {
   padding: 0;
