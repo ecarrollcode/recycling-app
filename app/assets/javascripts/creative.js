@@ -62,3 +62,10 @@
     });
 
 })(jQuery); // End of use strict
+
+<script>
+function popupFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+</script>

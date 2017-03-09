@@ -235,6 +235,17 @@
                                     Chemicals and Oils
                                 </div>
                                 <div class="project-name">
+                                    <!-- attempings to make popup for an image to show per word -->
+                                    <div class="popup" onclick="myFunction()">paint
+                                        <span class="popuptext" id="myPopup"><img src="images/items/chemicals/paint.jpg" class="img-responsive"></span>
+                                    </div>
+                                    <script>
+                                    // When the user clicks on div, open the popup
+                                    function myFunction() {
+                                        var popup = document.getElementById("myPopup");
+                                        popup.classList.toggle("show");
+                                    }
+                                    </script>
                                     Some chemicals and some oils
                                 </div>
                             </div>
@@ -450,6 +461,7 @@
             <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4piiBT9lv_CdqgsWiFBrPASbUyq2XZMI&callback=initMap"></script>
         </div>
     </section>
+
 
 
 
