@@ -303,6 +303,15 @@ header .header-content .header-content-inner p {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   padding: 0 15px;
 }
+.portfolio-box .portfolio-box-caption .info-icon {
+  width: 100%;
+  text-align: bottom;
+  position: absolute;
+  top: 82%;
+  left: 86%;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  padding: 0 15px;
+}
 
 /* Popup container - can be anything you want */
 .popup {
