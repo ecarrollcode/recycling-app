@@ -489,7 +489,9 @@
                 var map = new google.maps.Map(document.getElementById('map'), {
                   zoom: 15,
                   scrollwheel: false,
-                  center: uluru
+                  center: uluru,
+                  mapTypeControl: false,
+                  streetViewControl: false
                 });
                 var current = new google.maps.Marker({
                   position: uluru,
