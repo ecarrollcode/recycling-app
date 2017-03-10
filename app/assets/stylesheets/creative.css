@@ -345,7 +345,7 @@ header .header-content .header-content-inner p {
 }
 
 .truck {
-  width: 100%;
+  width: auto;
   text-align: top;
   position: absolute;
   top: 10%;
