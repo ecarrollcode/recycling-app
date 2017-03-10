@@ -44,12 +44,7 @@ p {
 }
 
 
-/* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-#map {
-  height: 100%;
-  margin-bottom: 0%;
-}
+
 
 /* Optional: Makes the sample page fill the window. */
 html, body {
@@ -78,8 +73,12 @@ aside {
   padding: 0;
 }
 
+#mainNav {
+  position:;
+}
 
 .navbar-default {
+  width: 100%;
   background-color: white;
   border-color: rgba(34, 34, 34, 0.05);
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
@@ -280,7 +279,7 @@ header .header-content .header-content-inner p {
   transition: all 0.35s;
 }
 .portfolio-box .portfolio-box-caption .recycle-filter {
-  width: 100%;
+  width: auto;
   text-align: top;
   position: absolute;
   top: 10%;
@@ -289,7 +288,7 @@ header .header-content .header-content-inner p {
   padding: 0 15px;
 }
 .portfolio-box .portfolio-box-caption .compost-filter {
-  width: 100%;
+  width: auto;
   text-align: top;
   position: absolute;
   top: 10%;
@@ -298,7 +297,7 @@ header .header-content .header-content-inner p {
   padding: 0 15px;
 }
 .portfolio-box .portfolio-box-caption .trash-filter {
-  width: 100%;
+  width: auto;
   text-align: top;
   position: absolute;
   top: 10%;
@@ -307,7 +306,7 @@ header .header-content .header-content-inner p {
   padding: 0 15px;
 }
 .portfolio-box .portfolio-box-caption .info-icon {
-  width: 100%;
+  width: auto;
   text-align: bottom;
   position: absolute;
   top: 82%;
@@ -316,6 +315,12 @@ header .header-content .header-content-inner p {
   padding: 0 15px;
 }
 
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 85%;
+  margin-bottom: 0%;
+}
 
 .map-section {
   position: relative;
@@ -334,12 +339,12 @@ header .header-content .header-content-inner p {
 .map-bar{
   position: absolute;
   width: 100%;
-  min-height: 130px;
+  min-height: 15%;
   background-color: rgb(29, 172, 202);
   left: 0;
 }
 
-.map-bar .truck {
+.truck {
   width: 100%;
   text-align: top;
   position: absolute;
