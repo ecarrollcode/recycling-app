@@ -266,7 +266,7 @@ header .header-content .header-content-inner p {
   color: #3f3f3f;
   opacity: 0;
   display: block;
-  background: #eee;
+  background: rgba(238, 238, 238, .9);
   position: absolute;
   bottom: 0;
   text-align: center;
