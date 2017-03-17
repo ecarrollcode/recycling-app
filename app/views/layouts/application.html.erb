@@ -5,8 +5,16 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script>
+        $("#click").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#bins").offset().top
+            }, 2000);
+        });
+    </script>
 </head>
-<body id="page-top">
+<body id="page-top" style="background-color: #77C9D4">
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -52,7 +60,7 @@
                 </form>
                 <br>
                 <!-- <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p> -->
-                <a href="#bins" class="btn btn-primary btn-xl page-scroll">Search</a>
+                <a href="#bins" class="btn btn-primary btn-xl page-scroll" id="clicks">Search</a>
             </div>
         </div>
     </header>
@@ -115,7 +123,7 @@
  -->
     <section class="no-padding" id="bins">
         <div class="container-fluid">
-            <div class="row no-gutter popup-gallery">
+            <div class="row no-gutter popup-gallery" style="padding-top: 50px">
                 <!-- PLASTICS  -->
                 <div class="col-lg-4 col-sm-6">
                     <a class="portfolio-box">
@@ -534,7 +542,7 @@
         </div>
     </section>
 
-    <section class="some-padding" id="map-bar">
+    <section class="some-padding" id="map-bar" style="padding-top: 50px">
         <div class="container">
             <div class="row">
                 <div class="map-bar">
