@@ -5,6 +5,7 @@ class SearchesController < ApplicationController
   # GET /searches.json
   def index
     @searches = Search.all
+    @glass_examples = Item.where({category: 'glass'}).map(&:name)
   end
 
   # GET /searches/1

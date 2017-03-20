@@ -202,7 +202,9 @@
                                     Glass
                                 </div>
                                 <div class="project-name">
-                                    Glass item examples
+                                    <% @glass_examples.each do |glass_example| %>
+                                        <%= glass_example %>
+                                    <% end %>
                                 </div>
                             </div>
                         </div>
