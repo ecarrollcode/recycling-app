@@ -6,6 +6,10 @@ class SearchesController < ApplicationController
   def index
     @searches = Search.all
     @glass_examples = Item.where({category: 'glass'}).map(&:name)
+    @plastic_examples = Item.where({category: 'plastic'}).map(&:name)
+    @papers_examples = Item.where({category: 'papers'}).map(&:name)
+    @metals_examples = Item.where({category: 'metals'}).map(&:name)
+    @electronics_examples = Item.where({category: 'electronics'}).map(&:name)
   end
 
   # GET /searches/1

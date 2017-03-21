@@ -146,7 +146,9 @@
                                     Plastics
                                 </div>
                                 <div class="project-name">
-                                    plastic water bottles, 
+                                    <% @plastic_examples.each do |plastic_example| %>
+                                        <%= plastic_example %>
+                                    <% end %>
                                 </div>
                             </div>
                         </div>
@@ -174,7 +176,9 @@
                                     Paper and Cardboard
                                 </div>
                                 <div class="project-name">
-                                    junk mail, telephone books, office paper, envelopes, wrapping paper, binder paper
+                                    <% @papers_examples.each do |papers_example| %>
+                                        <%= papers_example %>
+                                    <% end %>
                                 </div>
                             </div>
                         </div>
@@ -232,7 +236,9 @@
                                     Aluminum and Metals
                                 </div>
                                 <div class="project-name">
-                                    metal and aluminum exmamples 
+                                    <% @metals_examples.each do |metals_example| %>
+                                        <%= metals_example %>
+                                    <% end %>
                                 </div>
                             </div>
                         </div>
@@ -327,7 +333,9 @@
                                     E-waste, batteries, and lights
                                 </div>
                                 <div class="project-name">
-                                    here are some tech examples 
+                                    <% @electronics_examples.each do |electronics_example| %>
+                                        <%= electronics_example %>
+                                    <% end %> 
                                 </div>
                             </div>
                         </div>
