@@ -206,9 +206,21 @@
                                     Glass
                                 </div>
                                 <div class="project-name">
-                                    <% @glass_examples.each do |glass_example| %>
+                                    <div class="popup" onclick="myFunction()">
+                                        <% @glass_examples.each do |glass_example| %>
                                         <%= glass_example %><%= "," unless glass_example == @glass_examples.last %>
-                                    <% end %>
+                                        <span class="popuptext" id="myPopup"><img src="images/items/chemicals/paint.jpg" class="img-responsive">
+                                        </span>
+                                        <% end %>
+                                    </div>
+                    
+                                    <script>
+                                    // When the user clicks on div, open the popup
+                                    function myFunction() {
+                                        var popup = document.getElementById("myPopup");
+                                        popup.classList.toggle("show");
+                                    }
+                                    </script>
                                 </div>
                             </div>
                         </div>
