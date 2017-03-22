@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20170308022003) do
     t.string "bin", null: false
     t.string "info"
     t.string "cities"
+    t.string "img_path"
     t.string "recycling_plants"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
