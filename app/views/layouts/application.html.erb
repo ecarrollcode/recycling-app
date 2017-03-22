@@ -147,7 +147,7 @@
                                 </div>
                                 <div class="project-name">
                                     <% @plastic_examples.each do |plastic_example| %>
-                                        <%= plastic_example %>
+                                        <%= plastic_example %><%= "," unless plastic_example == @plastic_examples.last %>
                                     <% end %>
                                 </div>
                             </div>
@@ -177,7 +177,7 @@
                                 </div>
                                 <div class="project-name">
                                     <% @papers_examples.each do |papers_example| %>
-                                        <%= papers_example %>
+                                        <%= papers_example %><%= "," unless papers_example == @papers_examples.last %>
                                     <% end %>
                                 </div>
                             </div>
@@ -207,7 +207,7 @@
                                 </div>
                                 <div class="project-name">
                                     <% @glass_examples.each do |glass_example| %>
-                                        <%= glass_example %>
+                                        <%= glass_example %><%= "," unless glass_example == @glass_examples.last %>
                                     <% end %>
                                 </div>
                             </div>
@@ -237,7 +237,7 @@
                                 </div>
                                 <div class="project-name">
                                     <% @metals_examples.each do |metals_example| %>
-                                        <%= metals_example %>
+                                        <%= metals_example %><%= "," unless metals_example == @metals_examples.last %>
                                     <% end %>
                                 </div>
                             </div>
@@ -333,8 +333,9 @@
                                     E-waste, batteries, and lights
                                 </div>
                                 <div class="project-name">
+                                    <% @electronics_examples.join(",") %>
                                     <% @electronics_examples.each do |electronics_example| %>
-                                        <%= electronics_example %>
+                                        <%= electronics_example %><%= "," unless electronics_example == @electronics_examples.last %>
                                     <% end %> 
                                 </div>
                             </div>
