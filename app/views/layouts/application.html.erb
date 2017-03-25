@@ -55,9 +55,20 @@
             <div class="header-content-inner">
                 <h1 id="homeHeading">What do you want to recycle?</h1>
                 <br>
-                <form>
-                    <input type="text" name="search" value = "" placeholder="Search..">
-                </form>
+                <div class="input-group">
+                  <input type="text" class="form-control main-search" placeholder="Search for...">
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-secondary dropdown-toggle recycle-type" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Recycle Type
+                        <span class="caret"></span>
+                    </button>
+                    <div class="recycle-options dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-item" href="#">Centers</div>
+                        <div class="dropdown-item" href="#">Recyclables</div>
+                        <div class="dropdown-item" href="#">Bins</div>
+                    </div>
+                  </span>
+                </div>
                 <br>
                 <!-- <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p> -->
                 <a href="#bins" class="btn btn-primary btn-xl page-scroll" id="clicks">Search</a>
@@ -206,20 +217,37 @@
                                     Glass
                                 </div>
                                 <div class="project-name">
-                                    <div class="popup" onclick="myFunction()">
+                                    <div class="popup">
                                         <% @glass_examples.each do |glass_example| %>
-                                        <%= glass_example %><%= "," unless glass_example == @glass_examples.last %>
-                                        <span class="popuptext" id="myPopup"><img src="images/items/chemicals/paint.jpg" class="img-responsive">
-                                        </span>
+                                            <span class="item">
+                                            <%= glass_example.name %><%= "," unless glass_example == @glass_examples.last %>
+                                                <span class="popuptext" style="visibility: hidden;"><img src="<%= glass_example.img_path %>" class="img-responsive">
+                                                </span>
+                                            </span>
                                         <% end %>
                                     </div>
                     
                                     <script>
                                     // When the user clicks on div, open the popup
-                                    function myFunction() {
-                                        var popup = document.getElementById("myPopup");
-                                        popup.classList.toggle("show");
-                                    }
+                                    // function myFunction() {
+                                    //     var popup = document.getElementById("myPopup");
+                                    //     popup.classList.toggle("show");
+                                    // }
+
+                                    $(document).click(function() {
+                                        var $current_popuptext = $('.popuptext');
+                                        if ( $current_popuptext.css('visibility') == 'visible' )
+                                             $current_popuptext.css('visibility','hidden');
+                                    });
+
+                                    $('.item').click(function() {
+                                        var $popuptext = $(this).find('.popuptext');
+
+                                        if ( $popuptext.css('visibility') == 'hidden' )
+                                             $popuptext.css('visibility','visible');
+                                        else
+                                             $popuptext.css('visibility','hidden');
+                                    });
                                     </script>
                                 </div>
                             </div>
