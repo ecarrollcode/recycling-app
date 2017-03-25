@@ -169,7 +169,7 @@
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
                             <div class="info-icon">
-                                <img src="images/filters/info_icon.png" class="img-responsive">
+                                <img src="images/f_ilters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -208,7 +208,7 @@
                                 <div class="project-name">
                                     <div class="popup" onclick="myFunction()">
                                         <% @glass_examples.each do |glass_example| %>
-                                        <%= glass_example %><%= "," unless glass_example == @glass_examples.last %>
+                                        <%= glass_example.name %><%= "," unless glass_example == @glass_examples.last %>
                                         <span class="popuptext" id="myPopup"><img src="images/items/chemicals/paint.jpg" class="img-responsive">
                                         </span>
                                         <% end %>
