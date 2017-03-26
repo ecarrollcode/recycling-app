@@ -481,51 +481,27 @@ header .header-content .header-content-inner p {
 
 
 
-/*GESGSEGSEGSEGSEG*/
+/*ADDS BOX WHEN CLICKING ON INFO ICON*/
 .portfolio-box .portfolio-box-caption .info-box {
-
   color: #d81e1e;
   opacity: 0;
   display: block;
   background: rgba(204, 14, 14, .9);
   position: absolute;
-  /*position: relative;*/
-  /*bottom: 0;*/
   text-align: center;
   height: 120%;
   width: 100%;
   left: 0;
   right: 0;
-  /*max-width: 650px;*/
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
   top: 11.5%;
   transform: translateY(-10%);
-  /*transform: translateY(-50%);*/
-  /*top: 50%;*/
   margin: 0 auto;
-
-/*  color: #3f3f3f;
-  opacity: 0;
-  display: block;
-  background: rgba(238, 238, 238, .9);
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  -webkit-transition: all 0.35s;
-  -moz-transition: all 0.35s;
-  transition: all 0.35s;*/
 }
 
-
-/*.portfolio-box:active .portfolio-box-testy {
-  opacity: 1;
-}*/
-
-/*fsgsegsgesge*/
+/*END OF ADD BOX WHEN CLICK ON INFO ICON*/
 
 
 /*TESTING FOR SIDEBAR LEARNING BAR*/
