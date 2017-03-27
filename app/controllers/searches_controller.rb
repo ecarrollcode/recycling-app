@@ -12,7 +12,7 @@ class SearchesController < ApplicationController
     @electronics_examples = Item.where({category: 'electronics'}).map(&:name)
 
     if params.has_key?(:search_category)
-      @selection = params[:search_category][:sc_id]
+      @selection = params[:search_category]
     end
 
     @results = []

@@ -53,16 +53,29 @@
             <div class="header-content-inner">
                 <h1 id="homeHeading">What do you want to recycle?</h1>
                 <br>
-                  <%= form_tag(searches_path, :method => "get", id: "search-form") do %>
-                      <%= collection_select :search_category, :sc_id, SearchCategory.all, :id, :name, {}, {:class=>"btn btn-secondary search-category"} %>
-                      <%= text_field_tag :search, params[:search], placeholder: "Search.." %>
-                      <%= submit_tag "Search", :name => nil, class: "btn btn-primary btn-xl dropdown-toggle search-btn" %>
-                  <% end %>
-                  
-                  <% @results.each do |result| %>
-                      <%= result %><%= "," unless result == @results.last %>
-                  <% end %>
+                   <%= form_tag(searches_path, :method => "get", id: "search-form") do %>
+                    <div class="row">
+                        <div class="col">
+                            <div class="input-group">
+                              <%= text_field_tag :search, params[:search], placeholder: "Search..", class: "form-control search-bar"%>
+                                <div class="input-group-btn">
+                                  <select type="button" id="search-category" name="search_category" class="btn btn-default search-type" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span>
+                                      <option value="1">Centers</option>
+                                      <option value="2">Items</option>
+                                      <option value="3">Bins</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                        <%= submit_tag "Search", :name => nil, class: "btn btn-primary btn-xl dropdown-toggle search-btn" %>
+                    <% end %>
+                </div>
                 <br>
+
+                <% @results.each do |result| %>
+                    <%= result %><%= "," unless result == @results.last %>
+                <% end %>
             </div>
         </div>
     </header>

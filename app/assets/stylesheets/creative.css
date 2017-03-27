@@ -398,6 +398,14 @@ header .header-content .header-content-inner p {
   margin-bottom: 0%;
 }
 
+.search-type {
+  height: 52px;
+}
+
+.search-bar {
+  height: 52px;
+}
+
 .map-section {
   position: relative;
   width: 100%;
