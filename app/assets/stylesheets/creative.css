@@ -563,16 +563,40 @@ header .header-content .header-content-inner p {
 }
 
 .big-side .big-side-content .big-side-details {
-  text-align: center;
+  text-align: left;
   color: white;
   font-size: 50px;
 }
 
 .big-side .big-side-close {
+  position: absolute;
   text-align: right;
   color: white;
-  font-size: 50px
+  font-size: 50px;
+  bottom: 0;
+  right: 0;
 }
+
+.big-side .big-side-content .bulk-donations {
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  margin-left: 25vw;
+  margin-right: 25vw;
+}
+
+.big-side .big-side-content .bulk-donations .goodwill {
+  position: absolute;
+  left: 0;
+  margin-left: 30vw;
+}
+
+.big-side .big-side-content .bulk-donations .salvation-army {
+  position: absolute;
+  margin-right: 30vw;
+  right: 0;
+}
+
 /*END  BIG SIDE BAR BULK*/
 
 
