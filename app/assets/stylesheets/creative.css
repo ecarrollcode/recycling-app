@@ -282,7 +282,7 @@ header .header-content .header-content-inner p {
   text-align: top;
   position: absolute;
   top: 10%;
-  left: 26%;
+  left: 20%;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   padding: 0 15px;
 }
@@ -291,7 +291,7 @@ header .header-content .header-content-inner p {
   text-align: top;
   position: absolute;
   top: 10%;
-  left: 41%;
+  left: 35%;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   padding: 0 15px;
 }
@@ -300,7 +300,16 @@ header .header-content .header-content-inner p {
   text-align: top;
   position: absolute;
   top: 10%;
-  left: 56%;
+  left: 50%;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  padding: 0 15px;
+}
+.portfolio-box .portfolio-box-caption .special-filter {
+  width: auto;
+  text-align: top;
+  position: absolute;
+  top: 10%;
+  left: 65%;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   padding: 0 15px;
 }
