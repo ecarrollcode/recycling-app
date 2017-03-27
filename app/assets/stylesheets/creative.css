@@ -261,6 +261,7 @@ header .header-content .header-content-inner p {
   display: block;
   max-width: 650px;
   margin: 0 auto;
+  z-index: 1;
 }
 .portfolio-box .portfolio-box-caption {
   color: #3f3f3f;
@@ -502,6 +503,44 @@ header .header-content .header-content-inner p {
 }
 
 /*END OF ADD BOX WHEN CLICK ON INFO ICON*/
+
+/* BIG SIDE BAR BULK*/
+.big-side {
+  background-color: black;
+  position: absolute;
+  display: block;
+  width: 0vw;
+  /*width: 100px;*/
+  height: 100%;
+  /*height: 100px;*/
+  margin: 0 auto;
+  right: 0px;
+  /*opacity: 0;*/
+  z-index: 10;
+}
+
+.big-side .big-side-content{
+  margin: 50px;
+}
+
+.big-side .big-side-content .big-side-title{
+  text-align: left;
+  color: white;
+  font-size: 100px;
+}
+
+.big-side .big-side-content .big-side-details {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
+
+.big-side .big-side-close {
+  text-align: right;
+  color: white;
+  font-size: 50px
+}
+/*END  BIG SIDE BAR BULK*/
 
 
 /*TESTING FOR SIDEBAR LEARNING BAR*/

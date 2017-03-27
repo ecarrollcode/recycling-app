@@ -408,9 +408,14 @@
                             <div class="trash-filter">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon">
+                            <div class="info-icon" id="info-icon-id-bulk">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
+                            <!-- 
+                            <div class="info-icon" onclick="showBigSide();">
+                                <img src="images/filters/info_icon.png" class="img-responsive"> 
+                            </div>
+                             -->
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
                                     Bulk
@@ -506,6 +511,31 @@
                         </div>
                     </a>
                 </div>
+                 <!--  BIG SIDE BAR  BULK -->
+                <div class="big-side" id='big-side-id'>
+                    <div class="big-side-content">
+                        <div class="big-side-title">
+                            About Bulk
+                        </div>
+                        <div class="big-side-details">
+                            B. 
+                        </div>
+                        <div class="big-side-close" id="big-side-close-id">
+                            Close
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $("#info-icon-id-bulk").click(function() {
+                        $("#big-side-id").animate({width: "80vw"});
+                    });
+                </script>
+                <script>
+                    $("#big-side-close-id").click(function() {
+                        $("#big-side-id").animate({width: "0vw"});
+                    });
+                </script>
+                <!-- end side bar BULK -->
             </div>
         </div>
     </section>
