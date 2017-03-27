@@ -169,21 +169,6 @@ aside {
   transition: all 0.35s;
 }
 
-.ding-dong[type="text"] {
-    width: 100%;
-    box-sizing: border-box;
-    /*border: 2px solid #ccc;*/
-    border-radius: 10px;
-    font-size: 20px;
-    background-color: white;
-    color: #3f3f3f;
-    /*background-image: "images/searchicon.png");*/
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
-    padding: 12px 12px 12px 12px;
-    outline: none;
-}
-
 .main-search {
   height: 50px;
 }
