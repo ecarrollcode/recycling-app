@@ -173,7 +173,7 @@
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
                             <div class="info-icon">
-                                <img src="images/filters/info_icon.png" class="img-responsive">
+                                <img src="images/f_ilters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -212,11 +212,9 @@
                                 <div class="project-name">
                                     <div class="popup">
                                         <% @glass_examples.each do |glass_example| %>
-                                            <span class="item">
-                                            <%= glass_example.name %><%= "," unless glass_example == @glass_examples.last %>
-                                                <span class="popuptext" style="visibility: hidden;"><img src="<%= glass_example.img_path %>" class="img-responsive">
-                                                </span>
-                                            </span>
+                                        <%= glass_example.name %><%= "," unless glass_example == @glass_examples.last %>
+                                        <span class="popuptext" id="myPopup"><img src="images/items/chemicals/paint.jpg" class="img-responsive">
+                                        </span>
                                         <% end %>
                                     </div>
                     
@@ -376,6 +374,7 @@
                     </a>
                 </div>
                 <!-- ORGANIC -->
+                                <!-- ORGANIC -->
                 <div class="col-lg-4 col-sm-6">
                     <a class="portfolio-box">
                         <img src="images/portfolio/thumbnails/8.jpg" class="img-responsive" alt="">
@@ -389,9 +388,16 @@
                             <div class="trash-filter">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon">
+                            <div class="info-icon" onclick="toggleImage();">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
+                                
                             </div>
+                            <div class="ino-icon" id="test1">
+                            </div>
+                                <!-- <input id="info-organic" class="info-toggle" type="checkbox">
+                                    <label for="info-organic"><img src="images/filters/info_icon.png" class="img-responsive"></label>
+                                    <div class="org-box">
+                                    </div> -->
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
                                     Organic
@@ -401,6 +407,23 @@
                                 </div>
                             </div>
                         </div>
+
+                      <!--   <div class="portfolio-box-testy" id="test1">
+                            <div class="porfolio-box-tester">
+                            </div>
+                            <div class="testy1" onclick="toggleImage();">Fol</div>
+                        </div> -->
+                        <script>
+                            function toggleImage(){
+                                var div = document.getElementById('test1');
+                                // if(!div.style.display || div.style.display == 'block') div.style.display = 'none';
+                                // else div.style.display='block';
+                                if(div.style.opacity == '0') div.style.opacity = '0.9';
+                                else div.style.opacity ='0';
+
+                            }
+                        </script>
+
                     </a>
                 </div>
                 <!-- BULK -->

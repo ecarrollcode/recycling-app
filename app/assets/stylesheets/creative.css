@@ -934,6 +934,7 @@ header .header-content .header-content-inner p {
   left: 86%;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   padding: 0 15px;
+  z-index: 2;
 }
 
 /* Always set the map height explicitly to define the size of the div
@@ -1100,6 +1101,163 @@ header .header-content .header-content-inner p {
     font-size: 18px;
   }
 }
+
+
+
+/*GESGSEGSEGSEGSEG*/
+.portfolio-box .portfolio-box-caption .ino-icon {
+
+  color: #d81e1e;
+  opacity: 0;
+  display: block;
+  background: rgba(204, 14, 14, .9);
+  position: absolute;
+  /*position: relative;*/
+  /*bottom: 0;*/
+  text-align: center;
+  height: 120%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  /*max-width: 650px;*/
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+  top: 11.5%;
+  transform: translateY(-10%);
+  /*transform: translateY(-50%);*/
+  /*top: 50%;*/
+  margin: 0 auto;
+
+/*  color: #3f3f3f;
+  opacity: 0;
+  display: block;
+  background: rgba(238, 238, 238, .9);
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;*/
+}
+
+
+/*.portfolio-box:active .portfolio-box-testy {
+  opacity: 1;
+}*/
+
+/*fsgsegsgesge*/
+
+
+/*TESTING FOR SIDEBAR LEARNING BAR*/
+
+.toggle {
+  text-decoration: none;
+  font-size: 2em;
+  color:rgba(0,0,0,0.61);
+  -webkit-transition: all 0.15s ease-out 0;
+  -moz-transition: all 0.15s ease-out 0;
+  transition: all 0.45s ease-out 0;
+  position: fixed;
+  top: 50px;
+  left: 0px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.side {
+
+}
+
+#rectange{
+  width:200px;
+  height:100px;
+  background:red;
+}
+.rect{
+  width: 50px;
+  height: 50px;
+  background: blue;
+}
+
+.sidebar {
+  position: fixed;
+  top: 100px;
+  bottom: 0px;
+  left: -500px;
+  -webkit-transition: all 0.15s ease-out 0;
+  -moz-transition: all 0.15s ease-out 0;
+  transition: all 0.15s ease-out 0;
+  width: 10rem;
+  padding: 10em;
+  color: rgba(0,0,0,.8);
+  background: rgba(0,0,0,.8);
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 100px;
+  padding: 100px;
+}
+
+.sidebar li a {
+  color: #fff;
+  font-size: 15em;
+  margin: 10px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 200%;
+}
+.sidebar a:hover {
+  color: rgba(0,0,0,0.61);
+}
+#slide:checked + .container .sidebar {
+  left: 0px;
+}
+#slide:checked + .container .toggle {
+  left: 0px;
+}
+
+#slide:checked + .container .rect{
+  width: 500px;
+  height: 500px;
+}
+#slide {
+  display: none;
+}
+
+
+/*END TESTING FOR SIDE LEARNING BAR*/
+
+
+/*TRYING TO MAKE INFO SCREEN*/
+.info-toggle {
+  visibility: hidden;
+}
+.info-toggle + label {
+
+}
+
+.org-box {
+  width: 50px;
+  height: 50px;
+  background: blue;
+}
+
+#info-organic:checked + .container .org-box {
+  width: 500px;
+  height: 500px;
+}
+
+/*END INFO SCREEN*/
+
+
+
+
+
 .call-to-action h2 {
   margin: 0 auto 20px;
 }
