@@ -114,5 +114,8 @@ MailingList.create!([
   {user_id: 4, name: "Edward Carroll", email: "ecarroll@students.pitzer.edu"}
 ])
 RecyclingPlant.create!([
-  {plant_id: 1, name: "Residential Recycling Center", plant_hours: "Friday, Saturday, & Sunday - 24 hours", gps_coords: "34.11385,-117.697629"}
+  {plant_id: 1, name: "Residential Recycling Center", plant_hours: "Friday, Saturday, & Sunday - 24 hours", gps_coords: "34.11385,-117.697629"},
+  {plant_id: 2, name: "Premises Materials", plant_hours: "", gps_coords: "34.091373,-117.700089"},
+  {plant_id: 3, name: "rePlanet Recycling", plant_hours: "", gps_coords: "34.108001,-117.735477"},
+  {plant_id: 4, name: "Interstate All Battery Center", plant_hours: "", gps_coords: "34.103936,-117.686841}"}
 ])
