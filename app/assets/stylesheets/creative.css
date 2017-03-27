@@ -504,6 +504,30 @@ header .header-content .header-content-inner p {
 
 /*END OF ADD BOX WHEN CLICK ON INFO ICON*/
 
+
+/*TESTING ITEM INFO BOXES*/
+.portfolio-box .portfolio-box-caption .item-info-box {
+  color: #d81e1e;
+  opacity: 0;
+  display: block;
+  background: rgba(204, 14, 14, .9);
+  position: absolute;
+  text-align: center;
+  height: 120%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+  top: 11.5%;
+  transform: translateY(-10%);
+  margin: 0 auto;
+  /*z-index: 0;*/
+}
+/*END TESTING ITEM INFO BOXES*/
+
+
 /* BIG SIDE BAR BULK*/
 .big-side {
   background-color: black;
@@ -543,8 +567,11 @@ header .header-content .header-content-inner p {
 /*END  BIG SIDE BAR BULK*/
 
 
-/*TESTING FOR SIDEBAR LEARNING BAR*/
 
+
+
+
+/*TESTING FOR SIDEBAR LEARNING BAR*/
 .toggle {
   text-decoration: none;
   font-size: 2em;
