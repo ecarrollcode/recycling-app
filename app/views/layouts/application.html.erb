@@ -60,7 +60,10 @@
                       <%= text_field_tag :search, params[:search], placeholder: "Search.." %>
                       <%= submit_tag "Search", :name => nil, class: "btn btn-secondary dropdown-toggle search-btn" %>
                   <% end %>
-                  <%= @results %>
+                  
+                  <% @results.each do |result| %>
+                      <%= result %><%= "," unless result == @results.last %>
+                  <% end %>
                 <br>
             </div>
         </div>
