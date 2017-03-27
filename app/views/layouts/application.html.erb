@@ -142,6 +142,9 @@
                             <div class="trash-filter">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
+                            <div class="special-filter">
+                                <img src="images/filters/special_filter.png" class="img-responsive">
+                            </div>
                             <div class="info-icon">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
@@ -172,8 +175,11 @@
                             <div class="trash-filter">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
+                            <div class="special-filter">
+                                <img src="images/filters/special_filter.png" class="img-responsive">
+                            </div>
                             <div class="info-icon">
-                                <img src="images/f_ilters/info_icon.png" class="img-responsive">
+                                <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -201,6 +207,9 @@
                             </div>
                             <div class="trash-filter">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
+                            </div>
+                            <div class="special-filter">
+                                <img src="images/filters/special_filter.png" class="img-responsive">
                             </div>
                             <div class="info-icon">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
@@ -259,6 +268,9 @@
                             <div class="trash-filter">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
+                            <div class="special-filter">
+                                <img src="images/filters/special_filter.png" class="img-responsive">
+                            </div>
                             <div class="info-icon">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
@@ -288,6 +300,9 @@
                             </div>
                             <div class="trash-filter">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
+                            </div>
+                            <div class="special-filter">
+                                <img src="images/filters/special_filter.png" class="img-responsive">
                             </div>
                             <div class="info-icon">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
@@ -328,6 +343,9 @@
                             <div class="trash-filter">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
+                            <div class="special-filter">
+                                <img src="images/filters/special_filter.png" class="img-responsive">
+                            </div>
                             <div class="info-icon">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
@@ -356,14 +374,21 @@
                             <div class="trash-filter">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon">
+                            <div class="special-filter">
+                                <img src="images/filters/special_filter.png" class="img-responsive">
+                            </div>
+                            <div class="info-icon" onclick="showItemBox();">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
+                                
+                            </div>
+                            <div class="item-info-box" id="item-info-box-show">
                             </div>
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
                                     E-waste, batteries, and lights
                                 </div>
                                 <div class="project-name">
+                                    <!-- TESTING MAKING ITEM SHOW NEW BOX -->
                                     <% @electronics_examples.join(",") %>
                                     <% @electronics_examples.each do |electronics_example| %>
                                         <%= electronics_example %><%= "," unless electronics_example == @electronics_examples.last %>
@@ -371,10 +396,17 @@
                                 </div>
                             </div>
                         </div>
+                        <script>
+                            function showItemBox(){
+                                var div = document.getElementById('item-info-box-show');
+                                if(div.style.opacity == '0') div.style.opacity = '.9';
+                                else div.style.opacity ='0';
+
+                            }
+                        </script>
                     </a>
                 </div>
                 <!-- ORGANIC -->
-                                <!-- ORGANIC -->
                 <div class="col-lg-4 col-sm-6">
                     <a class="portfolio-box">
                         <img src="images/portfolio/thumbnails/8.jpg" class="img-responsive" alt="">
@@ -388,16 +420,15 @@
                             <div class="trash-filter">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
+                            <div class="special-filter">
+                                <img src="images/filters/special_filter.png" class="img-responsive">
+                            </div>
                             <div class="info-icon" onclick="toggleImage();">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                                 
                             </div>
-                            <div class="ino-icon" id="test1">
+                            <div class="info-box" id="info-box-show">
                             </div>
-                                <!-- <input id="info-organic" class="info-toggle" type="checkbox">
-                                    <label for="info-organic"><img src="images/filters/info_icon.png" class="img-responsive"></label>
-                                    <div class="org-box">
-                                    </div> -->
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
                                     Organic
@@ -407,17 +438,9 @@
                                 </div>
                             </div>
                         </div>
-
-                      <!--   <div class="portfolio-box-testy" id="test1">
-                            <div class="porfolio-box-tester">
-                            </div>
-                            <div class="testy1" onclick="toggleImage();">Fol</div>
-                        </div> -->
                         <script>
                             function toggleImage(){
-                                var div = document.getElementById('test1');
-                                // if(!div.style.display || div.style.display == 'block') div.style.display = 'none';
-                                // else div.style.display='block';
+                                var div = document.getElementById('info-box-show');
                                 if(div.style.opacity == '0') div.style.opacity = '0.9';
                                 else div.style.opacity ='0';
 
@@ -440,9 +463,17 @@
                             <div class="trash-filter">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon">
+                            <div class="special-filter">
+                                <img src="images/filters/special_filter.png" class="img-responsive">
+                            </div>
+                            <div class="info-icon" id="info-icon-id-bulk">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
+                            <!-- 
+                            <div class="info-icon" onclick="showBigSide();">
+                                <img src="images/filters/info_icon.png" class="img-responsive"> 
+                            </div>
+                             -->
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
                                     Bulk
@@ -467,6 +498,9 @@
                             </div>
                             <div class="trash-filter">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
+                            </div>
+                            <div class="special-filter">
+                                <img src="images/filters/special_filter.png" class="img-responsive">
                             </div>
                             <div class="info-icon">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
@@ -496,6 +530,9 @@
                             <div class="trash-filter">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
+                            <div class="special-filter">
+                                <img src="images/filters/special_filter.png" class="img-responsive">
+                            </div>
                             <div class="info-icon">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
@@ -524,6 +561,9 @@
                             <div class="trash-filter">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
+                            <div class="special-filter">
+                                <img src="images/filters/special_filter.png" class="img-responsive">
+                            </div>
                             <div class="info-icon">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
@@ -538,6 +578,32 @@
                         </div>
                     </a>
                 </div>
+                 <!-- TESTING BIG SIDE BAR  BULK -->
+                <div class="big-side" id='big-side-id'>
+                    <div class="big-side-content">
+                        <div class="big-side-title">
+                            About Bulk
+                        </div>
+                        <div class="big-side-details">
+                            B. 
+                        </div>
+                        <div class="big-side-close" id="big-side-close-id">
+                            Close
+                        </div>
+                                
+                    </div>
+                </div>
+                <script>
+                    $("#info-icon-id-bulk").click(function() {
+                        $("#big-side-id").animate({width: "80vw"});
+                    });
+                </script>
+                <script>
+                    $("#big-side-close-id").click(function() {
+                        $("#big-side-id").animate({width: "0vw"});
+                    });
+                </script>
+                <!-- end testing side bar BULK -->
             </div>
         </div>
     </section>
