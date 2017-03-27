@@ -55,23 +55,13 @@
             <div class="header-content-inner">
                 <h1 id="homeHeading">What do you want to recycle?</h1>
                 <br>
-                <div class="input-group">
-                  <input type="text" class="form-control main-search" placeholder="Search for...">
-                  <span class="input-group-btn">
-                    <button type="button" class="btn btn-secondary dropdown-toggle recycle-type" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Recycle Type
-                        <span class="caret"></span>
-                    </button>
-                    <div class="recycle-options dropdown-menu dropdown-menu-right">
-                        <div class="dropdown-item" href="#">Centers</div>
-                        <div class="dropdown-item" href="#">Recyclables</div>
-                        <div class="dropdown-item" href="#">Bins</div>
-                    </div>
-                  </span>
-                </div>
+                  <%= form_tag(searches_path, :method => "get", id: "search-form") do %>
+                      <%= collection_select :search_category, :sc_id, SearchCategory.all, :id, :name, {}, {:class=>"btn btn-secondary search-category"} %>
+                      <%= text_field_tag :search, params[:search], placeholder: "Search.." %>
+                      <%= submit_tag "Search", :name => nil, class: "btn btn-secondary dropdown-toggle search-btn" %>
+                  <% end %>
+                  <%= @results %>
                 <br>
-                <!-- <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p> -->
-                <a href="#bins" class="btn btn-primary btn-xl page-scroll" id="clicks">Search</a>
             </div>
         </div>
     </header>

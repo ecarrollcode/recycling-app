@@ -478,6 +478,17 @@ header .header-content .header-content-inner p {
     margin-left: -80px;
 }
 
+.search-btn {
+  margin-top: 15px;
+  width: 12%;
+}
+
+.search-category {
+  color: black;
+  margin-bottom: 10px;
+  width: 12%;
+}
+
 /* Popup arrow */
 .popup .popuptext::after {
     content: "";

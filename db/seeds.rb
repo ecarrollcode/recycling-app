@@ -13,6 +13,11 @@ Category.create!([
   {category_id: 12, name: "mixed", info: ""},
   {category_id: 13, name: "other", info: ""}
 ])
+SearchCategory.create!([
+  {sc_id: 1, name: "Centers"},
+  {sc_id: 2, name: "Items"},
+  {sc_id: 3, name: "Bins"}
+])
 City.create!([
   {city_id: 1, name: "Claremont, CA", website: "http://www.ci.claremont.ca.us/government/departments-divisions/community-services/trash-and-recycling", gps_coords: "34.0966764,-117.71977850000002"}
 ])
