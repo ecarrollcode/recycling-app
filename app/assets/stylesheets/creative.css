@@ -43,9 +43,6 @@ p {
   margin-bottom: 20px;
 }
 
-
-
-
 /* Optional: Makes the sample page fill the window. */
 html, body {
   height: 100%;
@@ -473,12 +470,6 @@ header .header-content .header-content-inner p {
 
 .search-btn {
   margin-top: 15px;
-  width: 12%;
-}
-
-.search-category {
-  color: black;
-  margin-bottom: 10px;
   width: 12%;
 }
 

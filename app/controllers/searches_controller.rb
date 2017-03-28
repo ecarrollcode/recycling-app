@@ -17,23 +17,23 @@ class SearchesController < ApplicationController
 
     @results = []
 
-    if params[:search]
+    if params[:search_bar]
       if @selection == "1"
-        @search = RecyclingPlant.search(params[:search])
+        @search = RecyclingPlant.search(params[:search_bar])
         if @search.present?
           @results = @search.map(&:name)
         else
           @results = ["No results"]
         end
       elsif @selection == "2"
-        @search = Item.search(params[:search])
+        @search = Item.search(params[:search_bar])
         if @search.present?
           @results = @search.map(&:name)
         else
           @results = ["No results"]
         end
       elsif @selection == "3"
-        @search = Category.search(params[:search])
+        @search = Category.search(params[:search_bar])
         if @search.present?
           @results = @search.map(&:name)
         else
