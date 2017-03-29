@@ -560,10 +560,22 @@ header .header-content .header-content-inner p {
   font-size: 100px;
 }
 
+.big-side .big-side-content .big-side-title-plastic{
+  text-align: left;
+  color: white;
+  font-size: 100px;
+}
+
 .big-side .big-side-content .big-side-details {
   text-align: left;
   color: white;
   font-size: 50px;
+}
+
+.big-side .big-side-content .plastic-codes {
+  display: block;
+  margin: auto;
+  width: 50%;
 }
 
 .big-side .big-side-close {
@@ -574,6 +586,7 @@ header .header-content .header-content-inner p {
   bottom: 0;
   right: 0;
 }
+
 
 .big-side .big-side-content .bulk-donations {
   color: white;
