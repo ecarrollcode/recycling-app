@@ -500,7 +500,7 @@
                     </a>
                 </div>
                  <!-- TESTING BIG SIDE BAR  BULK -->
-                <div class="big-side" id='big-side-id'>
+                <div class="big-side" id='big-side-id' hidden>
                     <div class="big-side-content">
                         <div class="big-side-title">
                             About Bulk
@@ -521,14 +521,14 @@
                             </a>
                             </div>
                         </div>
-                        <div class="big-side-close" id="big-side-close-id">
+                        <div class="big-side-close" id="big-side-close-id" hidden>
                             Close
                         </div>
-                                
                     </div>
                 </div>
                 <script>
                     $("#info-icon-id-bulk").click(function() {
+                        $('.big-side-close').show();
                         $("#big-side-id").animate({width: "80vw"});
                     });
                 </script>
