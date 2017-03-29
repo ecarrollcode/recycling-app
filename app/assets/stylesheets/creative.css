@@ -516,7 +516,6 @@ header .header-content .header-content-inner p {
 /*TESTING ITEM INFO BOXES*/
 .portfolio-box .portfolio-box-caption .item-info-box {
   color: #d81e1e;
-  opacity: 0;
   display: block;
   background: rgba(204, 14, 14, .9);
   position: absolute;
