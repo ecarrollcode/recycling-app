@@ -900,6 +900,7 @@ header .header-content .header-content-inner p {
   transition: all 0.35s;
 }
 .portfolio-box .portfolio-box-caption .recycle-filter {
+  cursor: pointer;
   width: auto;
   text-align: top;
   position: absolute;
@@ -909,6 +910,7 @@ header .header-content .header-content-inner p {
   padding: 0 15px;
 }
 .portfolio-box .portfolio-box-caption .compost-filter {
+  cursor: pointer;
   width: auto;
   text-align: top;
   position: absolute;
@@ -918,6 +920,7 @@ header .header-content .header-content-inner p {
   padding: 0 15px;
 }
 .portfolio-box .portfolio-box-caption .trash-filter {
+  cursor: pointer;
   width: auto;
   text-align: top;
   position: absolute;
@@ -927,6 +930,7 @@ header .header-content .header-content-inner p {
   padding: 0 15px;
 }
 .portfolio-box .portfolio-box-caption .special-filter {
+  cursor: pointer;
   width: auto;
   text-align: top;
   position: absolute;
@@ -1182,20 +1186,100 @@ header .header-content .header-content-inner p {
   font-size: 100px;
 }
 
+.big-side .big-side-content .big-side-title-plastic{
+  text-align: left;
+  color: white;
+  font-size: 100px;
+}
+
+.big-side .big-side-content .big-side-title-paper{
+  text-align: left;
+  color: white;
+  font-size: 100px;
+}
+
+.big-side .big-side-content .big-side-title-glass{
+  text-align: left;
+  color: white;
+  font-size: 100px;
+}
+
+.big-side .big-side-content .big-side-title-oil{
+  text-align: left;
+  color: white;
+  font-size: 100px;
+}
+
+.big-side .big-side-content .big-side-title-metal{
+  text-align: left;
+  color: white;
+  font-size: 100px;
+}
+
+.big-side .big-side-content .big-side-title-hazard{
+  text-align: left;
+  color: white;
+  font-size: 100px;
+}
+
+.big-side .big-side-content .big-side-title-pharma{
+  text-align: left;
+  color: white;
+  font-size: 100px;
+}
+
+.big-side .big-side-content .big-side-title-mixed{
+  text-align: left;
+  color: white;
+  font-size: 100px;
+}
+
+.big-side .big-side-content .big-side-title-other{
+  text-align: left;
+  color: white;
+  font-size: 100px;
+}
+
 .big-side .big-side-content .big-side-details {
   text-align: left;
   color: white;
   font-size: 50px;
 }
 
+.big-side .big-side-content .plastic-codes {
+  /*text-align:center;
+  width: 100%;*/
+  display: flex;
+  display: -webkit-box;           
+  display: -moz-box;              
+  display: -ms-flexbox;           
+  display: -webkit-flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.pcodes1, .pcodes2, .pcodes3, .pcodes4, .pcodes5, .pcodes6, .pcodes7{
+  /*width: calc(100% / 3);  
+  display: inline-block;
+  vertical-align: top;   
+  text-align:center;
+  margin-left: 1%vw;
+  margin-right: -8%vw;
+  margin-bottom: -8%vw;
+  margin-top: 1%vw;*/
+  width: calc(100%/3);
+  margin-right: calc(100%/-10);
+}
+
 .big-side .big-side-close {
   position: absolute;
   text-align: right;
   color: white;
-  font-size: 50px;
+  font-size: 5vh;
   bottom: 0;
   right: 0;
 }
+
 
 .big-side .big-side-content .bulk-donations {
   color: white;

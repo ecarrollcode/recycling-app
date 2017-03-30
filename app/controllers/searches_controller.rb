@@ -4,12 +4,18 @@ class SearchesController < ApplicationController
   # GET /searches
   # GET /searches.json
   def index
-    @searches = Search.all
-    @glass_examples = Item.where({category: 'glass'})
-    @plastic_examples = Item.where({category: 'plastic'}).map(&:name)
-    @papers_examples = Item.where({category: 'papers'}).map(&:name)
-    @metals_examples = Item.where({category: 'metals'}).map(&:name)
-    @electronics_examples = Item.where({category: 'electronics'}).map(&:name)
+    @plastic_examples = Item.where({category: 'plastic'})
+    @papers_examples = Item.where({category: 'papers'})
+    @metals_examples = Item.where({category: 'metals'})
+    @chemicals_oil_examples = Item.where({category: 'chemicals/oil'})
+    @hazardous_examples = Item.where({category: 'hazardous'})
+    @electronics_examples = Item.where({category: 'electronics'})
+    @ebl_examples = Item.where({category: 'ewaste/batteries/lights'})
+    @organic_examples = Item.where({category: 'organic'})
+    @bulk_examples = Item.where({category: 'bulk'})
+    @pharmaceuticals_examples = Item.where({category: 'pharmaceuticals'})
+    @mixed_examples = Item.where({category: 'mixed'})
+    @other_examples = Item.where({category: 'other'})
 
     if params.has_key?(:search_category)
       @selection = params[:search_category]
