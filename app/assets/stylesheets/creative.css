@@ -573,19 +573,28 @@ header .header-content .header-content-inner p {
 }
 
 .big-side .big-side-content .plastic-codes {
-  text-align:center;
-  width: 100%;
+  /*text-align:center;
+  width: 100%;*/
+  display: flex;
+  display: -webkit-box;           
+  display: -moz-box;              
+  display: -ms-flexbox;           
+  display: -webkit-flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .pcodes1, .pcodes2, .pcodes3, .pcodes4, .pcodes5, .pcodes6, .pcodes7{
-  width: calc(100% / 3);  
+  /*width: calc(100% / 3);  
   display: inline-block;
   vertical-align: top;   
   text-align:center;
-  margin-left: -50px;
-  margin-right: -100px;
-  margin-bottom: -25px;
-  margin-top: -50px;
+  margin-left: 1%vw;
+  margin-right: -8%vw;
+  margin-bottom: -8%vw;
+  margin-top: 1%vw;*/
+  width: calc(100%/3);
+  margin-right: calc(100%/-10);
 }
 
 .big-side .big-side-close {
