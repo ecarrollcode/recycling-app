@@ -566,6 +566,54 @@ header .header-content .header-content-inner p {
   font-size: 100px;
 }
 
+.big-side .big-side-content .big-side-title-paper{
+  text-align: left;
+  color: white;
+  font-size: 100px;
+}
+
+.big-side .big-side-content .big-side-title-glass{
+  text-align: left;
+  color: white;
+  font-size: 100px;
+}
+
+.big-side .big-side-content .big-side-title-oil{
+  text-align: left;
+  color: white;
+  font-size: 100px;
+}
+
+.big-side .big-side-content .big-side-title-metal{
+  text-align: left;
+  color: white;
+  font-size: 100px;
+}
+
+.big-side .big-side-content .big-side-title-hazard{
+  text-align: left;
+  color: white;
+  font-size: 100px;
+}
+
+.big-side .big-side-content .big-side-title-pharma{
+  text-align: left;
+  color: white;
+  font-size: 100px;
+}
+
+.big-side .big-side-content .big-side-title-mixed{
+  text-align: left;
+  color: white;
+  font-size: 100px;
+}
+
+.big-side .big-side-content .big-side-title-other{
+  text-align: left;
+  color: white;
+  font-size: 100px;
+}
+
 .big-side .big-side-content .big-side-details {
   text-align: left;
   color: white;

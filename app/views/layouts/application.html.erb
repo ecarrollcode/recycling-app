@@ -114,7 +114,7 @@
                             <div class="special-filter">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon">
+                            <div class="info-icon" id="info-icon-id-paper">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -147,7 +147,7 @@
                             <div class="special-filter">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon">
+                            <div class="info-icon" id="info-icon-id-glass">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -192,7 +192,7 @@
                             <div class="special-filter">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon">
+                            <div class="info-icon" id="info-icon-id-metal">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -225,7 +225,7 @@
                             <div class="special-filter">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon">
+                            <div class="info-icon" id="info-icon-id-oil">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -267,7 +267,7 @@
                             <div class="special-filter">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon">
+                            <div class="info-icon" id="info-icon-id-hazard">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -423,7 +423,7 @@
                             <div class="special-filter">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon">
+                            <div class="info-icon" id="info-icon-id-pharma">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -454,7 +454,7 @@
                             <div class="special-filter">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon">
+                            <div class="info-icon" id="info-icon-id-mixed">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -485,7 +485,7 @@
                             <div class="special-filter">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon">
+                            <div class="info-icon" id="info-icon-id-other">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -615,6 +615,294 @@
                     });
                 </script>
                 <!-- END big side bar PLASTIC -->
+                 <!--  BIG SIDE BAR PAPER -->
+                <div class="big-side" id='big-side-id-paper' hidden>
+                    <div class="big-side-content">
+                        <div class="big-side-title-paper">
+                            Paper + Cardboard
+                        </div>
+                        <div class="big-side-close" id="big-side-close-id-paper" hidden>
+                            Close
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $("#info-icon-id-paper").click(function() {
+                        $('#big-side-close-id-paper').show();
+                        $("#big-side-id-paper").animate({width: "80vw"});
+                    });
+                </script>
+                <script>
+                    $("#big-side-close-id-paper").click(function() {
+                        $("#big-side-id-paper").animate({width: "0vw"});
+                    });
+                </script>
+                <script>
+                    var navTop = $('#big-side-id-paper').offset().top;
+
+                    $(window).scroll(function(){
+                        if ($(this).scrollTop() >= navTop) {
+                            $('#big-side-id-paper').css('position', 'fixed');
+                            $('#big-side-id-paper').css('top', '0');
+                        } else {
+                            $('#big-side-id-paper').css('position', 'absolute');
+                            $('#big-side-id-paper').css('top', navTop);
+                        }
+                    });
+                </script>
+                <!-- END big side bar PAPER -->
+                 <!--  BIG SIDE BAR GLASS -->
+                <div class="big-side" id='big-side-id-glass' hidden>
+                    <div class="big-side-content">
+                        <div class="big-side-title-glass">
+                            Glass
+                        </div>
+                        <div class="big-side-close" id="big-side-close-id-glass" hidden>
+                            Close
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $("#info-icon-id-glass").click(function() {
+                        $('#big-side-close-id-glass').show();
+                        $("#big-side-id-glass").animate({width: "80vw"});
+                    });
+                </script>
+                <script>
+                    $("#big-side-close-id-glass").click(function() {
+                        $("#big-side-id-glass").animate({width: "0vw"});
+                    });
+                </script>
+                <script>
+                    var navTop = $('#big-side-id-glass').offset().top;
+
+                    $(window).scroll(function(){
+                        if ($(this).scrollTop() >= navTop) {
+                            $('#big-side-id-glass').css('position', 'fixed');
+                            $('#big-side-id-glass').css('top', '0');
+                        } else {
+                            $('#big-side-id-glass').css('position', 'absolute');
+                            $('#big-side-id-glass').css('top', navTop);
+                        }
+                    });
+                </script>
+                <!-- END big side bar GLASS -->
+                 <!--  BIG SIDE BAR OIL -->
+                <div class="big-side" id='big-side-id-oil' hidden>
+                    <div class="big-side-content">
+                        <div class="big-side-title-oil">
+                            Oil
+                        </div>
+                        <div class="big-side-close" id="big-side-close-id-oil" hidden>
+                            Close
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $("#info-icon-id-oil").click(function() {
+                        $('#big-side-close-id-oil').show();
+                        $("#big-side-id-oil").animate({width: "80vw"});
+                    });
+                </script>
+                <script>
+                    $("#big-side-close-id-oil").click(function() {
+                        $("#big-side-id-oil").animate({width: "0vw"});
+                    });
+                </script>
+                <script>
+                    var navTop = $('#big-side-id-oil').offset().top;
+
+                    $(window).scroll(function(){
+                        if ($(this).scrollTop() >= navTop) {
+                            $('#big-side-id-oil').css('position', 'fixed');
+                            $('#big-side-id-oil').css('top', '0');
+                        } else {
+                            $('#big-side-id-oil').css('position', 'absolute');
+                            $('#big-side-id-oil').css('top', navTop);
+                        }
+                    });
+                </script>
+                <!-- END big side bar OIL -->
+                 <!--  BIG SIDE BAR METAL -->
+                <div class="big-side" id='big-side-id-metal' hidden>
+                    <div class="big-side-content">
+                        <div class="big-side-title-metal">
+                            Metal
+                        </div>
+                        <div class="big-side-close" id="big-side-close-id-metal" hidden>
+                            Close
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $("#info-icon-id-metal").click(function() {
+                        $('#big-side-close-id-metal').show();
+                        $("#big-side-id-metal").animate({width: "80vw"});
+                    });
+                </script>
+                <script>
+                    $("#big-side-close-id-metal").click(function() {
+                        $("#big-side-id-metal").animate({width: "0vw"});
+                    });
+                </script>
+                <script>
+                    var navTop = $('#big-side-id-metal').offset().top;
+
+                    $(window).scroll(function(){
+                        if ($(this).scrollTop() >= navTop) {
+                            $('#big-side-id-metal').css('position', 'fixed');
+                            $('#big-side-id-metal').css('top', '0');
+                        } else {
+                            $('#big-side-id-metal').css('position', 'absolute');
+                            $('#big-side-id-metal').css('top', navTop);
+                        }
+                    });
+                </script>
+                <!-- END big side bar METAL -->
+                 <!--  BIG SIDE BAR PHARMA -->
+                <div class="big-side" id='big-side-id-pharma' hidden>
+                    <div class="big-side-content">
+                        <div class="big-side-title-pharma">
+                            Pharma
+                        </div>
+                        <div class="big-side-close" id="big-side-close-id-pharma" hidden>
+                            Close
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $("#info-icon-id-pharma").click(function() {
+                        $('#big-side-close-id-pharma').show();
+                        $("#big-side-id-pharma").animate({width: "80vw"});
+                    });
+                </script>
+                <script>
+                    $("#big-side-close-id-pharma").click(function() {
+                        $("#big-side-id-pharma").animate({width: "0vw"});
+                    });
+                </script>
+                <script>
+                    var navTop = $('#big-side-id-pharma').offset().top;
+
+                    $(window).scroll(function(){
+                        if ($(this).scrollTop() >= navTop) {
+                            $('#big-side-id-pharma').css('position', 'fixed');
+                            $('#big-side-id-pharma').css('top', '0');
+                        } else {
+                            $('#big-side-id-pharma').css('position', 'absolute');
+                            $('#big-side-id-pharma').css('top', navTop);
+                        }
+                    });
+                </script>
+                <!-- END big side bar PHARMA -->
+                 <!--  BIG SIDE BAR MIXED -->
+                <div class="big-side" id='big-side-id-mixed' hidden>
+                    <div class="big-side-content">
+                        <div class="big-side-title-mixed">
+                            Mixed
+                        </div>
+                        <div class="big-side-close" id="big-side-close-id-mixed" hidden>
+                            Close
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $("#info-icon-id-mixed").click(function() {
+                        $('#big-side-close-id-mixed').show();
+                        $("#big-side-id-mixed").animate({width: "80vw"});
+                    });
+                </script>
+                <script>
+                    $("#big-side-close-id-mixed").click(function() {
+                        $("#big-side-id-mixed").animate({width: "0vw"});
+                    });
+                </script>
+                <script>
+                    var navTop = $('#big-side-id-mixed').offset().top;
+
+                    $(window).scroll(function(){
+                        if ($(this).scrollTop() >= navTop) {
+                            $('#big-side-id-mixed').css('position', 'fixed');
+                            $('#big-side-id-mixed').css('top', '0');
+                        } else {
+                            $('#big-side-id-mixed').css('position', 'absolute');
+                            $('#big-side-id-mixed').css('top', navTop);
+                        }
+                    });
+                </script>
+                <!-- END big side bar MIXED -->
+                 <!--  BIG SIDE BAR OTHER -->
+                <div class="big-side" id='big-side-id-other' hidden>
+                    <div class="big-side-content">
+                        <div class="big-side-title-other">
+                            Other
+                        </div>
+                        <div class="big-side-close" id="big-side-close-id-other" hidden>
+                            Close
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $("#info-icon-id-other").click(function() {
+                        $('#big-side-close-id-other').show();
+                        $("#big-side-id-other").animate({width: "80vw"});
+                    });
+                </script>
+                <script>
+                    $("#big-side-close-id-other").click(function() {
+                        $("#big-side-id-other").animate({width: "0vw"});
+                    });
+                </script>
+                <script>
+                    var navTop = $('#big-side-id-other').offset().top;
+
+                    $(window).scroll(function(){
+                        if ($(this).scrollTop() >= navTop) {
+                            $('#big-side-id-other').css('position', 'fixed');
+                            $('#big-side-id-other').css('top', '0');
+                        } else {
+                            $('#big-side-id-other').css('position', 'absolute');
+                            $('#big-side-id-other').css('top', navTop);
+                        }
+                    });
+                </script>
+                <!-- END big side bar OTHER -->
+                 <!--  BIG SIDE BAR HAZARD -->
+                <div class="big-side" id='big-side-id-hazard' hidden>
+                    <div class="big-side-content">
+                        <div class="big-side-title-hazard">
+                            Hazardous
+                        </div>
+                        <div class="big-side-close" id="big-side-close-id-hazard" hidden>
+                            Close
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $("#info-icon-id-hazard").click(function() {
+                        $('#big-side-close-id-hazard').show();
+                        $("#big-side-id-hazard").animate({width: "80vw"});
+                    });
+                </script>
+                <script>
+                    $("#big-side-close-id-hazard").click(function() {
+                        $("#big-side-id-hazard").animate({width: "0vw"});
+                    });
+                </script>
+                <script>
+                    var navTop = $('#big-side-id-hazard').offset().top;
+
+                    $(window).scroll(function(){
+                        if ($(this).scrollTop() >= navTop) {
+                            $('#big-side-id-hazard').css('position', 'fixed');
+                            $('#big-side-id-hazard').css('top', '0');
+                        } else {
+                            $('#big-side-id-hazard').css('position', 'absolute');
+                            $('#big-side-id-hazard').css('top', navTop);
+                        }
+                    });
+                </script>
+                <!-- END big side bar HAZARDOUS -->
             </div>
         </div>
     </section>
