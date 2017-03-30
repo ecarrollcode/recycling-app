@@ -500,7 +500,7 @@
                     </a>
                 </div>
                  <!--  BIG SIDE BAR BULK -->
-                <div class="big-side" id='big-side-id' hidden>
+                <div class="big-side follow-scroll" id='big-side-id' hidden>
                     <div class="big-side-content">
                         <div class="big-side-title">
                             About Bulk
@@ -537,6 +537,21 @@
                         $("#big-side-id").animate({width: "0vw"});
                     });
                 </script>
+                <!-- BULK BAR SCROLLING -->
+                <script>
+                    var navTop = $('#big-side-id').offset().top;
+
+                    $(window).scroll(function(){
+                        if ($(this).scrollTop() >= navTop) {
+                            $('#big-side-id').css('position', 'fixed');
+                            $('#big-side-id').css('top', '0');
+                        } else {
+                            $('#big-side-id').css('position', 'absolute');
+                            $('#big-side-id').css('top', navTop);
+                        }
+                    });
+                </script>
+                <!-- END BULK SCROLLING  -->
                 <!-- END big side bar BULK -->
                  <!--  BIG SIDE BAR PLASTIC -->
                 <div class="big-side" id='big-side-id-plastic' hidden>
@@ -584,6 +599,19 @@
                 <script>
                     $("#big-side-close-id-plastic").click(function() {
                         $("#big-side-id-plastic").animate({width: "0vw"});
+                    });
+                </script>
+                <script>
+                    var navTop = $('#big-side-id-plastic').offset().top;
+
+                    $(window).scroll(function(){
+                        if ($(this).scrollTop() >= navTop) {
+                            $('#big-side-id-plastic').css('position', 'fixed');
+                            $('#big-side-id-plastic').css('top', '0');
+                        } else {
+                            $('#big-side-id-plastic').css('position', 'absolute');
+                            $('#big-side-id-plastic').css('top', navTop);
+                        }
                     });
                 </script>
                 <!-- END big side bar PLASTIC -->
