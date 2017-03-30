@@ -4,6 +4,8 @@ class SearchesController < ApplicationController
   # GET /searches
   # GET /searches.json
   def index
+    @searches = Search.all
+    @glass_examples = Item.where({category: 'glass'})
     @plastic_examples = Item.where({category: 'plastic'})
     @papers_examples = Item.where({category: 'papers'})
     @metals_examples = Item.where({category: 'metals'})
