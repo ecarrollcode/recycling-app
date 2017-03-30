@@ -65,23 +65,23 @@
         <div class="container-fluid">
             <div class="row no-gutter popup-gallery" style="padding-top: 50px">
                 <!-- PLASTICS  -->
-                <div class="col-lg-4 col-sm-6">
+                 <div class="col-lg-4 col-sm-6">
                     <a class="portfolio-box">
                         <img src="images/portfolio/thumbnails/1_.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
-                            <div class="recycle-filter">
+                            <div class="filter-icon recycle-filter" data-filter-type="recycle">
                                 <img src="images/filters/recycle_filter.png" class="img-responsive">
                             </div>
-                            <div class="compost-filter">
+                            <div class="filter-icon compost-filter" data-filter-type="compost">
                                 <img src="images/filters/compost_filter.png" class="img-responsive">
                             </div>
-                            <div class="trash-filter">
+                            <div class="filter-icon trash-filter" data-filter-type="trash">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
-                            <div class="special-filter">
+                            <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon" id="info-icon-id-plastic">
+                            <div class="info-icon">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -90,7 +90,7 @@
                                 </div>
                                 <div class="project-name">
                                     <% @plastic_examples.each do |plastic_example| %>
-                                        <%= plastic_example %><%= "," unless plastic_example == @plastic_examples.last %>
+                                        <span data-item-bin="<%= plastic_example.bin %>"><%= plastic_example.name %><%= "," unless plastic_example == @plastic_examples.last %></span>
                                     <% end %>
                                 </div>
                             </div>
@@ -102,19 +102,19 @@
                     <a class="portfolio-box">
                         <img src="images/portfolio/thumbnails/2_.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
-                            <div class="recycle-filter">
+                            <div class="filter-icon recycle-filter" data-filter-type="recycle">
                                 <img src="images/filters/recycle_filter.png" class="img-responsive">
                             </div>
-                            <div class="compost-filter">
+                            <div class="filter-icon compost-filter" data-filter-type="compost">
                                 <img src="images/filters/compost_filter.png" class="img-responsive">
                             </div>
-                            <div class="trash-filter">
+                            <div class="filter-icon trash-filter" data-filter-type="trash">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
-                            <div class="special-filter">
+                            <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon" id="info-icon-id-paper">
+                            <div class="info-icon">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -123,7 +123,7 @@
                                 </div>
                                 <div class="project-name">
                                     <% @papers_examples.each do |papers_example| %>
-                                        <%= papers_example %><%= "," unless papers_example == @papers_examples.last %>
+                                        <span data-item-bin="<%= papers_example.bin %>"><%= papers_example.name %><%= "," unless papers_example == @papers_examples.last %></span>
                                     <% end %>
                                 </div>
                             </div>
@@ -135,19 +135,19 @@
                     <a class="portfolio-box">
                         <img src="images/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
-                            <div class="recycle-filter">
+                            <div class="filter-icon recycle-filter" data-filter-type="recycle">
                                 <img src="images/filters/recycle_filter.png" class="img-responsive">
                             </div>
-                            <div class="compost-filter">
+                            <div class="filter-icon compost-filter" data-filter-type="compost">
                                 <img src="images/filters/compost_filter.png" class="img-responsive">
                             </div>
-                            <div class="trash-filter">
+                            <div class="filter-icon trash-filter" data-filter-type="trash">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
-                            <div class="special-filter">
+                            <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon" id="info-icon-id-glass">
+                            <div class="info-icon">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -155,20 +155,31 @@
                                     Glass
                                 </div>
                                 <div class="project-name">
-                                    <div class="popup" onclick="myFunction()">
-                                        <% @glass_examples.each do |glass_example| %>
-                                        <%= glass_example.name %><%= "," unless glass_example == @glass_examples.last %>
-                                        <span class="popuptext" id="myPopup"><img src="images/items/chemicals/paint.jpg" class="img-responsive">
-                                        </span>
-                                        <% end %>
-                                    </div>
+                                    <% @glass_examples.each do |glass_example| %>
+                                        <span data-item-bin="<%= glass_example.bin %>"><%= glass_example.name %><%= "," unless glass_example == @glass_examples.last %></span>
+                                    <% end %>
                     
                                     <script>
                                     // When the user clicks on div, open the popup
-                                    function myFunction() {
-                                        var popup = document.getElementById("myPopup");
-                                        popup.classList.toggle("show");
-                                    }
+                                    // function myFunction() {
+                                    //     var popup = document.getElementById("myPopup");
+                                    //     popup.classList.toggle("show");
+                                    // }
+
+                                    $(document).click(function() {
+                                        var $current_popuptext = $('.popuptext');
+                                        if ( $current_popuptext.css('visibility') == 'visible' )
+                                             $current_popuptext.css('visibility','hidden');
+                                    });
+
+                                    $('.item').click(function() {
+                                        var $popuptext = $(this).find('.popuptext');
+
+                                        if ( $popuptext.css('visibility') == 'hidden' )
+                                             $popuptext.css('visibility','visible');
+                                        else
+                                             $popuptext.css('visibility','hidden');
+                                    });
                                     </script>
                                 </div>
                             </div>
@@ -180,19 +191,19 @@
                     <a class="portfolio-box">
                         <img src="images/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
-                            <div class="recycle-filter">
+                            <div class="filter-icon recycle-filter" data-filter-type="recycle">
                                 <img src="images/filters/recycle_filter.png" class="img-responsive">
                             </div>
-                            <div class="compost-filter">
+                            <div class="filter-icon compost-filter" data-filter-type="compost">
                                 <img src="images/filters/compost_filter.png" class="img-responsive">
                             </div>
-                            <div class="trash-filter">
+                            <div class="filter-icon trash-filter" data-filter-type="trash">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
-                            <div class="special-filter">
+                            <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon" id="info-icon-id-metal">
+                            <div class="info-icon">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -201,7 +212,7 @@
                                 </div>
                                 <div class="project-name">
                                     <% @metals_examples.each do |metals_example| %>
-                                        <%= metals_example %><%= "," unless metals_example == @metals_examples.last %>
+                                        <span data-item-bin="<%= metals_example.bin %>"><%= metals_example.name %><%= "," unless metals_example == @metals_examples.last %></span>
                                     <% end %>
                                 </div>
                             </div>
@@ -213,19 +224,19 @@
                     <a class="portfolio-box">
                         <img src="images/portfolio/thumbnails/5.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
-                            <div class="recycle-filter">
+                            <div class="filter-icon recycle-filter" data-filter-type="recycle">
                                 <img src="images/filters/recycle_filter.png" class="img-responsive">
                             </div>
-                            <div class="compost-filter">
+                            <div class="filter-icon compost-filter" data-filter-type="compost">
                                 <img src="images/filters/compost_filter.png" class="img-responsive">
                             </div>
-                            <div class="trash-filter">
+                            <div class="filter-icon trash-filter" data-filter-type="trash">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
-                            <div class="special-filter">
+                            <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon" id="info-icon-id-oil">
+                            <div class="info-icon">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -233,18 +244,9 @@
                                     Chemicals and Oils
                                 </div>
                                 <div class="project-name">
-                                    <!-- attempings to make popup for an image to show per word -->
-                                    <div class="popup" onclick="myFunction()">paint
-                                        <span class="popuptext" id="myPopup"><img src="images/items/chemicals/paint.jpg" class="img-responsive"></span>
-                                    </div>
-                                    <script>
-                                    // When the user clicks on div, open the popup
-                                    function myFunction() {
-                                        var popup = document.getElementById("myPopup");
-                                        popup.classList.toggle("show");
-                                    }
-                                    </script>
-                                    Some chemicals and some oils
+                                    <% @chemicals_oil_examples.each do |chemicals_oil_example| %>
+                                        <span data-item-bin="<%= chemicals_oil_example.bin %>"><%= chemicals_oil_example.name %><%= "," unless chemicals_oil_example == @chemicals_oil_examples.last %></span>
+                                    <% end %>
                                 </div>
                             </div>
                         </div>
@@ -255,19 +257,19 @@
                     <a class="portfolio-box">
                         <img src="images/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
-                            <div class="recycle-filter">
+                            <div class="filter-icon recycle-filter" data-filter-type="recycle">
                                 <img src="images/filters/recycle_filter.png" class="img-responsive">
                             </div>
-                            <div class="compost-filter">
+                            <div class="filter-icon compost-filter" data-filter-type="compost">
                                 <img src="images/filters/compost_filter.png" class="img-responsive">
                             </div>
-                            <div class="trash-filter">
+                            <div class="filter-icon trash-filter" data-filter-type="trash">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
-                            <div class="special-filter">
+                            <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon" id="info-icon-id-hazard">
+                            <div class="info-icon">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -275,7 +277,9 @@
                                     Hazardous
                                 </div>
                                 <div class="project-name">
-                                    what are some hazardous items
+                                    <% @hazardous_examples.each do |hazardous_example| %>
+                                        <span data-item-bin="<%= hazardous_example.bin %>"><%= hazardous_example.name %><%= "," unless hazardous_example == @hazardous_examples.last %></span>
+                                    <% end %>
                                 </div>
                             </div>
                         </div>
@@ -286,45 +290,32 @@
                     <a class="portfolio-box">
                         <img src="images/portfolio/thumbnails/7.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
-                            <div class="recycle-filter">
+                            <div class="filter-icon recycle-filter" data-filter-type="recycle">
                                 <img src="images/filters/recycle_filter.png" class="img-responsive">
                             </div>
-                            <div class="compost-filter">
+                            <div class="filter-icon compost-filter" data-filter-type="compost">
                                 <img src="images/filters/compost_filter.png" class="img-responsive">
                             </div>
-                            <div class="trash-filter">
+                            <div class="filter-icon trash-filter" data-filter-type="trash">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
-                            <div class="special-filter">
+                            <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon" onclick="showItemBox();">
+                            <div class="info-icon">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
-                                
-                            </div>
-                            <div class="item-info-box" id="item-info-box-show" style="opacity: 0">
                             </div>
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
                                     E-waste, batteries, and lights
                                 </div>
                                 <div class="project-name">
-                                    <!-- TESTING MAKING ITEM SHOW NEW BOX -->
-                                    <% @electronics_examples.join(",") %>
-                                    <% @electronics_examples.each do |electronics_example| %>
-                                        <%= electronics_example %><%= "," unless electronics_example == @electronics_examples.last %>
-                                    <% end %> 
+                                    <% @ebl_examples.each do |ebl_example| %>
+                                        <span data-item-bin="<%= ebl_example.bin %>"><%= ebl_example.name %><%= "," unless ebl_example == @ebl_examples.last %></span>
+                                    <% end %>
                                 </div>
                             </div>
                         </div>
-                        <script>
-                            function showItemBox(){
-                                var div = document.getElementById('item-info-box-show');
-                                if(div.style.opacity == '0') div.style.opacity = '.9';
-                                else div.style.opacity ='0';
-
-                            }
-                        </script>
                     </a>
                 </div>
                 <!-- ORGANIC -->
@@ -332,42 +323,32 @@
                     <a class="portfolio-box">
                         <img src="images/portfolio/thumbnails/8.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
-                            <div class="recycle-filter">
+                            <div class="filter-icon recycle-filter" data-filter-type="recycle">
                                 <img src="images/filters/recycle_filter.png" class="img-responsive">
                             </div>
-                            <div class="compost-filter">
+                            <div class="filter-icon compost-filter" data-filter-type="compost">
                                 <img src="images/filters/compost_filter.png" class="img-responsive">
                             </div>
-                            <div class="trash-filter">
+                            <div class="filter-icon trash-filter" data-filter-type="trash">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
-                            <div class="special-filter">
+                            <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon" onclick="toggleImage();">
+                            <div class="info-icon">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
-                                
-                            </div>
-                            <div class="info-box" id="info-box-show" style="opacity: 0">
                             </div>
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
                                     Organic
                                 </div>
                                 <div class="project-name">
-                                    Food and such
+                                    <% @organic_examples.each do |organic_example| %>
+                                        <span data-item-bin="<%= organic_example.bin %>"><%= organic_example.name %><%= "," unless organic_example == @organic_examples.last %></span>
+                                    <% end %>
                                 </div>
                             </div>
                         </div>
-                        <script>
-                            function toggleImage(){
-                                var div = document.getElementById('info-box-show');
-                                if(div.style.opacity == '0') div.style.opacity = '0.9';
-                                else div.style.opacity ='0';
-
-                            }
-                        </script>
-
                     </a>
                 </div>
                 <!-- BULK -->
@@ -375,32 +356,29 @@
                     <a class="portfolio-box">
                         <img src="images/portfolio/thumbnails/9.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
-                            <div class="recycle-filter">
+                            <div class="filter-icon recycle-filter" data-filter-type="recycle">
                                 <img src="images/filters/recycle_filter.png" class="img-responsive">
                             </div>
-                            <div class="compost-filter">
+                            <div class="filter-icon compost-filter" data-filter-type="compost">
                                 <img src="images/filters/compost_filter.png" class="img-responsive">
                             </div>
-                            <div class="trash-filter">
+                            <div class="filter-icon trash-filter" data-filter-type="trash">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
-                            <div class="special-filter">
+                            <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
                             <div class="info-icon" id="info-icon-id-bulk">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
-                            <!-- 
-                            <div class="info-icon" onclick="showBigSide();">
-                                <img src="images/filters/info_icon.png" class="img-responsive"> 
-                            </div>
-                             -->
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
                                     Bulk
                                 </div>
                                 <div class="project-name">
-                                    Fridges, couches, chairs, ovens, ect.
+                                    <% @bulk_examples.each do |bulk_example| %>
+                                        <span data-item-bin="<%= bulk_example.bin %>"><%= bulk_example.name %><%= "," unless bulk_example == @bulk_examples.last %></span>
+                                    <% end %>
                                 </div>
                             </div>
                         </div>
@@ -411,19 +389,19 @@
                     <a class="portfolio-box">
                         <img src="images/portfolio/thumbnails/10.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
-                            <div class="recycle-filter">
+                            <div class="filter-icon recycle-filter" data-filter-type="recycle">
                                 <img src="images/filters/recycle_filter.png" class="img-responsive">
                             </div>
-                            <div class="compost-filter">
+                            <div class="filter-icon compost-filter" data-filter-type="compost">
                                 <img src="images/filters/compost_filter.png" class="img-responsive">
                             </div>
-                            <div class="trash-filter">
+                            <div class="filter-icon trash-filter" data-filter-type="trash">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
-                            <div class="special-filter">
+                            <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon" id="info-icon-id-pharma">
+                            <div class="info-icon">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -431,7 +409,9 @@
                                     Pharmaceuticals
                                 </div>
                                 <div class="project-name">
-                                    Pills and the like
+                                    <% @pharmaceuticals_examples.each do |pharmaceuticals_example| %>
+                                        <span data-item-bin="<%= pharmaceuticals_example.bin %>"><%= pharmaceuticals_example.name %><%= "," unless pharmaceuticals_example == @pharmaceuticals_examples.last %></span>
+                                    <% end %>
                                 </div>
                             </div>
                         </div>
@@ -442,19 +422,19 @@
                     <a class="portfolio-box">
                         <img src="images/portfolio/thumbnails/11.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
-                            <div class="recycle-filter">
+                            <div class="filter-icon recycle-filter" data-filter-type="recycle">
                                 <img src="images/filters/recycle_filter.png" class="img-responsive">
                             </div>
-                            <div class="compost-filter">
+                            <div class="filter-icon compost-filter" data-filter-type="compost">
                                 <img src="images/filters/compost_filter.png" class="img-responsive">
                             </div>
-                            <div class="trash-filter">
+                            <div class="filter-icon trash-filter" data-filter-type="trash">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
-                            <div class="special-filter">
+                            <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon" id="info-icon-id-mixed">
+                            <div class="info-icon">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -462,7 +442,9 @@
                                     Mixed
                                 </div>
                                 <div class="project-name">
-                                    idk what this even means
+                                    <% @mixed_examples.each do |mixed_example| %>
+                                        <span data-item-bin="<%= mixed_example.bin %>"><%= mixed_example.name %><%= "," unless mixed_example == @mixed_examples.last %></span>
+                                    <% end %>
                                 </div>
                             </div>
                         </div>
@@ -473,19 +455,19 @@
                     <a class="portfolio-box">
                         <img src="images/portfolio/thumbnails/12.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
-                            <div class="recycle-filter">
+                            <div class="filter-icon recycle-filter" data-filter-type="recycle">
                                 <img src="images/filters/recycle_filter.png" class="img-responsive">
                             </div>
-                            <div class="compost-filter">
+                            <div class="filter-icon compost-filter" data-filter-type="compost">
                                 <img src="images/filters/compost_filter.png" class="img-responsive">
                             </div>
-                            <div class="trash-filter">
+                            <div class="filter-icon trash-filter" data-filter-type="trash">
                                 <img src="images/filters/trash_filter.png" class="img-responsive">
                             </div>
-                            <div class="special-filter">
+                            <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon" id="info-icon-id-other">
+                            <div class="info-icon">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -493,7 +475,9 @@
                                     Other
                                 </div>
                                 <div class="project-name">
-                                    the stuff that just doesnt fit
+                                    <% @other_examples.each do |other_example| %>
+                                        <span data-item-bin="<%= other_example.bin %>"><%= other_example.name %><%= "," unless other_example == @other_examples.last %></span>
+                                    <% end %>
                                 </div>
                             </div>
                         </div>

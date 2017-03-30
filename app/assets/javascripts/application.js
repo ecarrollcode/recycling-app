@@ -16,3 +16,24 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+  $('.filter-icon').click(function() {
+    $filter_type = $(this).data('filter-type');
+    console.log($filter_type);
+    $item_spans = $(this).parent().find("span");
+    $item_spans.each(function() {
+      if ($(this).data("item-bin") != $filter_type) {
+        if($(this).is(":visible")){
+          $(this).fadeOut( 275, function() {
+            $(this).hide();
+          });
+        } else {
+          $(this).fadeIn( 275, function() {
+            $(this).show();
+          });
+        }
+      }
+    });
+  });
+});
