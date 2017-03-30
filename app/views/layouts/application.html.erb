@@ -98,7 +98,7 @@
                             <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon">
+                            <div class="info-icon" id="info-icon-id-plastic">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -131,7 +131,7 @@
                             <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon">
+                            <div class="info-icon" id="info-icon-id-paper">>
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -164,7 +164,7 @@
                             <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon">
+                            <div class="info-icon" id="info-icon-id-glass">>
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -219,7 +219,7 @@
                             <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon">
+                            <div class="info-icon" id="info-icon-id-metal">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -252,7 +252,7 @@
                             <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon">
+                            <div class="info-icon" id="info-icon-id-oil">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -285,7 +285,7 @@
                             <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon">
+                            <div class="info-icon" id="info-icon-id-hazard">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -318,7 +318,7 @@
                             <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon">
+                            <div class="info-icon" onclick="showItemBox();">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -332,6 +332,13 @@
                                 </div>
                             </div>
                         </div>
+                        <script>
+                            function showItemBox(){
+                                var div = document.getElementById('item-info-box-show');
+                                if(div.style.opacity == '0') div.style.opacity = '.9';
+                                else div.style.opacity ='0';
+                            }
+-                        </script>
                     </a>
                 </div>
                 <!-- ORGANIC -->
@@ -351,9 +358,10 @@
                             <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon">
+                            <div class="info-icon" onclick="toggleImage();">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
+                            <div class="info-box" id="info-box-show" style="opacity: 0"></div>
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
                                     Organic
@@ -365,6 +373,13 @@
                                 </div>
                             </div>
                         </div>
+                        <script>
+                            function toggleImage(){
+                                var div = document.getElementById('info-box-show');
+                                if(div.style.opacity == '0') div.style.opacity = '0.9';
+                                else div.style.opacity ='0';
+                            }
+ -                        </script>
                     </a>
                 </div>
                 <!-- BULK -->
@@ -417,7 +432,7 @@
                             <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon">
+                            <div class="info-icon" id="info-icon-id-pharma">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -450,7 +465,7 @@
                             <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon">
+                            <div class="info-icon" id="info-icon-id-mixed">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
@@ -483,7 +498,7 @@
                             <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon">
+                            <div class="info-icon" id="info-icon-id-other">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
                             <div class="portfolio-box-caption-content">
