@@ -556,6 +556,8 @@ header .header-content .header-content-inner p {
 
 .big-side .big-side-content{
   margin: 50px;
+  overflow: auto;
+  overflow-y: scroll;
 }
 
 .big-side .big-side-content .big-side-title{
@@ -622,6 +624,14 @@ header .header-content .header-content-inner p {
   text-align: left;
   color: white;
   font-size: 50px;
+}
+
+.big-side .big-side-content .big-side-paper-process {
+  display: flex;
+  position: fixed;
+  max-height: 74%;
+  overflow: auto;
+  overflow-y: scroll;
 }
 
 .big-side .big-side-content .plastic-codes {
