@@ -634,7 +634,7 @@ header .header-content .header-content-inner p {
 
 .big-side .big-side-content .big-side-glass-process {
   display: flex;
-  position: fixed;
+  /*position: fixed;*/
 }
 
 .big-side .big-side-content .plastic-codes {
