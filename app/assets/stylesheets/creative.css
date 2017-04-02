@@ -556,8 +556,6 @@ header .header-content .header-content-inner p {
 
 .big-side .big-side-content{
   margin: 50px;
-  overflow: auto;
-  overflow-y: scroll;
 }
 
 .big-side .big-side-content .big-side-title{
@@ -637,8 +635,6 @@ header .header-content .header-content-inner p {
 .big-side .big-side-content .big-side-glass-process {
   display: flex;
   position: fixed;
-  overflow: auto;
-  overflow-y: scroll;
 }
 
 .big-side .big-side-content .plastic-codes {
