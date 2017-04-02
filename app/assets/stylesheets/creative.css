@@ -634,6 +634,13 @@ header .header-content .header-content-inner p {
   overflow-y: scroll;
 }
 
+.big-side .big-side-content .big-side-glass-process {
+  display: flex;
+  position: fixed;
+  overflow: auto;
+  overflow-y: scroll;
+}
+
 .big-side .big-side-content .plastic-codes {
   /*text-align:center;
   width: 100%;*/
