@@ -6,7 +6,7 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'friendly_id', '~> 5.1.0'
 gem 'jquery-ui-rails'
 gem 'geocoder'
-gem 'jquery-rails'
+gem 'geokit-rails'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
