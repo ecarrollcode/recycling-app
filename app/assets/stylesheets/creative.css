@@ -648,6 +648,13 @@ ul.ui-autocomplete {
   /*position: fixed;*/
 }
 
+.big-side .big-side-content .big-side-metal-process {
+  display: flex;
+  margin-left: -40px;
+  margin-right: -40px;
+  /*position: fixed;*/
+}
+
 .big-side .big-side-content .plastic-codes {
   /*text-align:center;
   width: 100%;*/
