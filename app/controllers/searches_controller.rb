@@ -18,6 +18,7 @@ class SearchesController < ApplicationController
     @pharmaceuticals_examples = Item.where({category: 'pharmaceuticals'})
     @mixed_examples = Item.where({category: 'mixed'})
     @other_examples = Item.where({category: 'other'})
+    @client_ip = remote_ip()
   end
 
   # GET /searches/1
