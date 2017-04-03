@@ -90,7 +90,7 @@
                                 </div>
                                 <div class="project-name">
                                     <% @plastic_examples.each do |plastic_example| %>
-                                        <%= plastic_example %><%= "," unless plastic_example == @plastic_examples.last %>
+                                        <%= plastic_example.name %><%= "," unless plastic_example == @plastic_examples.last %>
                                     <% end %>
                                 </div>
                             </div>
@@ -123,7 +123,7 @@
                                 </div>
                                 <div class="project-name">
                                     <% @papers_examples.each do |papers_example| %>
-                                        <%= papers_example %><%= "," unless papers_example == @papers_examples.last %>
+                                        <%= papers_example.name %><%= "," unless papers_example == @papers_examples.last %>
                                     <% end %>
                                 </div>
                             </div>
@@ -201,7 +201,7 @@
                                 </div>
                                 <div class="project-name">
                                     <% @metals_examples.each do |metals_example| %>
-                                        <%= metals_example %><%= "," unless metals_example == @metals_examples.last %>
+                                        <%= metals_example.name %><%= "," unless metals_example == @metals_examples.last %>
                                     <% end %>
                                 </div>
                             </div>
@@ -312,7 +312,7 @@
                                     <!-- TESTING MAKING ITEM SHOW NEW BOX -->
                                     <% @electronics_examples.join(",") %>
                                     <% @electronics_examples.each do |electronics_example| %>
-                                        <%= electronics_example %><%= "," unless electronics_example == @electronics_examples.last %>
+                                        <%= electronics_example.name %><%= "," unless electronics_example == @electronics_examples.last %>
                                     <% end %> 
                                 </div>
                             </div>
