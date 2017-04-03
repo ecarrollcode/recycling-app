@@ -514,9 +514,6 @@ header .header-content .header-content-inner p {
   margin: 0 auto;
 }
 
-/*END OF ADD BOX WHEN CLICK ON INFO ICON*/
-
-
 /*TESTING ITEM INFO BOXES*/
 .portfolio-box .portfolio-box-caption .item-info-box {
   color: #d81e1e;
@@ -537,6 +534,20 @@ header .header-content .header-content-inner p {
   /*z-index: 0;*/
 }
 /*END TESTING ITEM INFO BOXES*/
+
+ul.ui-autocomplete {
+    list-style: none;
+}
+
+.ui-menu-item {
+  font-size: 20px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.ui-menu {
+  width: 30%;
+}
 
 
 /* BIG SIDE BAR BULK*/

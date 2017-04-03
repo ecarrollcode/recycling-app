@@ -36,4 +36,27 @@ $(document).ready(function() {
       }
     });
   });
+
+  $.ajax({
+    type: 'GET',
+    url: '/searches/get_ajx',
+    success: function(data){
+      var item_names = [];
+
+      $(data).each(function(index, obj) {
+        item_names.push(obj.name);
+      });
+
+      $( "#query" ).autocomplete({
+        source: item_names,
+        classes: {
+          "ui-autocomplete": "list-group-item"
+        }
+      });
+    },
+    error: function(xhr,status,error){
+      console.log(xhr);
+      console.log(error);
+    }
+  });
 });

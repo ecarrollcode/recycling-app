@@ -20,6 +20,37 @@ class SearchesController < ApplicationController
     @other_examples = Item.where({category: 'other'})
   end
 
+  def get_ajx
+    all_items = Item.all()
+    all_cats = Category.all()
+    all_centers = RecyclingPlant.all()
+
+    items_arr = Array.new
+
+    all_items.each do |item|
+      arr_item = Hash.new
+      arr_item["name"] = item.name
+      arr_item["item_id"] = item.item_id
+      items_arr.push(arr_item)
+    end
+
+    all_cats.each do |cat|
+      arr_item = Hash.new
+      arr_item["name"] = cat.name
+      arr_item["category_id"] = cat.category_id
+      items_arr.push(arr_item)
+    end
+
+    all_centers.each do |cat|
+      arr_item = Hash.new
+      arr_item["name"] = cat.name
+      arr_item["plant_id"] = cat.plant_id
+      items_arr.push(arr_item)
+    end
+
+    render :json => items_arr, :status => :ok
+  end
+
   # GET /searches/1
   # GET /searches/1.json
   def show
