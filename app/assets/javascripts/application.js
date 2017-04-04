@@ -48,7 +48,11 @@ $(document).ready(function() {
       });
 
       $( "#query" ).autocomplete({
-        source: item_names,
+        source: function(request, response) {
+          var results = $.ui.autocomplete.filter(item_names, request.term);
+
+          response(results.slice(0, 7));
+        },
         classes: {
           "ui-autocomplete": "list-group-item"
         }
