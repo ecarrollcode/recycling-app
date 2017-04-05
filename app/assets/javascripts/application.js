@@ -49,9 +49,29 @@ $(document).ready(function() {
 
       $( "#query" ).autocomplete({
         source: function(request, response) {
-          var results = $.ui.autocomplete.filter(item_names, request.term);
-
-          response(results.slice(0, 7));
+          var matchArry = item_names.slice(); // Copy the array
+          var srchTerms = $.trim(request.term).split(/\s+/);
+          // For each search term, remove non-matches.
+          $.each(srchTerms, function(J, term) {
+              var regX = new RegExp(term, "i");
+              matchArry = $.map(matchArry, function(item) {
+                  return regX.test(item) ? item : null;
+              });
+          });
+          // Return the match results.
+          response(matchArry.slice(0, 7));
+        },
+        open: function(event, ui) {
+          // This function provides no hooks to the results list, so we have to trust the selector, for now.
+          var resultsList = $("ul.ui-autocomplete > li.ui-menu-item > a")
+          var srchTerm = $.trim($("#tags").val()).split(/\s+/).join('|')
+          // Loop through the results list and highlight the terms.
+          resultsList.each(function() {
+            var jThis = $(this);
+            var regX = new RegExp('(' + srchTerm + ')', "ig");
+            var oldTxt = jThis.text();
+            jThis.html(oldTxt.replace(regX, '<span class="srchHilite">$1</span>'));
+          });
         },
         classes: {
           "ui-autocomplete": "list-group-item"
