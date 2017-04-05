@@ -17,8 +17,8 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function() {
-  // filter items functionality
+// filter items functionality
+function filterItems() {
   $('.filter-icon').click(function() {
     $filter_type = $(this).data('filter-type');
     console.log($filter_type);
@@ -37,8 +37,10 @@ $(document).ready(function() {
       }
     });
   });
+}
 
-  // searches functionality
+// functionality for loading search terms and autocompleting queries
+function getSearch() {
   $.ajax({
     type: 'GET',
     url: '/searches/get_ajx',
@@ -85,8 +87,10 @@ $(document).ready(function() {
       console.log(error);
     }
   });
+}
 
-  // navbar scrolling functionality
+// navbar scrolling functionality
+function navBarScrolling() {
   $('.bins-btn').click(function() {
     $('html, body').animate({
       scrollTop: $(".popup-gallery").offset().top
@@ -110,12 +114,25 @@ $(document).ready(function() {
       scrollTop: $("#map-bar").offset().top
     }, 'slow');
   });
+}
 
-  // info box overlay functionality
+// info box overlay functionality for when item is clicked
+function infoBoxOverlay() {
   var infoBox = $('#item-info-box-show');
   if(infoBox.css('opacity') == '0') {
     infoBox.css('opacity') = '.9';
   } else {
     infoBox.css('opacity');
   }
-});
+}
+
+function main() {
+  $(document).ready(function() {
+    filterItems();
+    getSearch();
+    navBarScrolling();
+    infoBoxOverlay();
+  });
+}
+
+main();
