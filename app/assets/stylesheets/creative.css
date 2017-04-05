@@ -493,6 +493,10 @@ header .header-content .header-content-inner p {
   }
 }
 
+.page-scroll {
+  cursor: pointer;
+}
+
 
 
 /*ADDS BOX WHEN CLICKING ON INFO ICON*/

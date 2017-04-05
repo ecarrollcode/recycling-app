@@ -18,6 +18,7 @@
 //= require_tree .
 
 $(document).ready(function() {
+  // filter items functionality
   $('.filter-icon').click(function() {
     $filter_type = $(this).data('filter-type');
     console.log($filter_type);
@@ -37,6 +38,7 @@ $(document).ready(function() {
     });
   });
 
+  // searches functionality
   $.ajax({
     type: 'GET',
     url: '/searches/get_ajx',
@@ -83,4 +85,37 @@ $(document).ready(function() {
       console.log(error);
     }
   });
+
+  // navbar scrolling functionality
+  $('.bins-btn').click(function() {
+    $('html, body').animate({
+      scrollTop: $(".popup-gallery").offset().top
+    }, 'slow');
+  });
+
+  $('.locations-btn').click(function() {
+    $('html, body').animate({
+      scrollTop: $("#map").offset().top
+    }, 'slow');
+  });
+
+  $('.search-btn').click(function() {
+    $('html, body').animate({
+      scrollTop: $("#page-top").offset().top
+    }, 'slow');
+  });
+
+  $('.learn-btn, .about-btn').click(function() {
+    $('html, body').animate({
+      scrollTop: $("#map-bar").offset().top
+    }, 'slow');
+  });
+
+  // info box overlay functionality
+  var infoBox = $('#item-info-box-show');
+  if(infoBox.css('opacity') == '0') {
+    infoBox.css('opacity') = '.9';
+  } else {
+    infoBox.css('opacity');
+  }
 });
