@@ -603,6 +603,12 @@ ul.ui-autocomplete {
   font-size: 100px;
 }
 
+.big-side .big-side-content .big-side-title-ewaste{
+  text-align: left;
+  color: white;
+  font-size: 100px;
+}
+
 .big-side .big-side-content .big-side-title-metal{
   text-align: left;
   color: white;
@@ -648,6 +654,16 @@ ul.ui-autocomplete {
 }
 
 .big-side .big-side-content .big-side-glass-process {
+  display: flex;
+  /*position: fixed;*/
+}
+
+.big-side .big-side-content .big-side-ewaste-image {
+  display: flex;
+  /*position: fixed;*/
+}
+
+.big-side .big-side-content .big-side-oil-image {
   display: flex;
   /*position: fixed;*/
 }

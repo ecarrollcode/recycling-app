@@ -297,7 +297,7 @@
                             <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon" onclick="showItemBox();">
+                            <div class="info-icon" id="info-icon-id-ewaste">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                                 
                             </div>
@@ -702,6 +702,9 @@
                         <div class="big-side-title-oil">
                             Oil
                         </div>
+                        <div class="big-side-oil-image">
+                            <img src="images/learn/oil/oil.png" class="img-responsive">
+                        </div>
                         <div class="big-side-close" id="big-side-close-id-oil" hidden>
                             Close
                         </div>
@@ -733,6 +736,46 @@
                     });
                 </script>
                 <!-- END big side bar OIL -->
+                 <!--  BIG SIDE BAR EWASTE -->
+                <div class="big-side" id='big-side-id-ewaste' hidden>
+                    <div class="big-side-content">
+                        <div class="big-side-title-ewaste">
+                            e-waste
+                        </div>
+                        <div class="big-side-ewaste-image">
+                            <img src="images/learn/ewaste/ewaste.png" class="img-responsive">
+                        </div>
+                        <div class="big-side-close" id="big-side-close-id-ewaste" hidden>
+                            Close
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $("#info-icon-id-ewaste").click(function() {
+                        $('#big-side-close-id-ewaste').show();
+                        $("#big-side-id-ewaste").animate({width: "80vw"});
+                    });
+                </script>
+                <script>
+                    $("#big-side-close-id-ewaste").click(function() {
+                        $('#big-side-close-id-ewaste').hide();
+                        $("#big-side-id-ewaste").animate({width: "0vw"});
+                    });
+                </script>
+                <script>
+                    var navTop = $('#big-side-id-ewaste').offset().top;
+
+                    $(window).scroll(function(){
+                        if ($(this).scrollTop() >= navTop) {
+                            $('#big-side-id-ewaste').css('position', 'fixed');
+                            $('#big-side-id-ewaste').css('top', '0');
+                        } else {
+                            $('#big-side-id-ewaste').css('position', 'absolute');
+                            $('#big-side-id-ewaste').css('top', navTop);
+                        }
+                    });
+                </script>
+                <!-- END big side bar EWASTE -->
                  <!--  BIG SIDE BAR METAL -->
                 <div class="big-side" id='big-side-id-metal' hidden>
                     <div class="big-side-content">
