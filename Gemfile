@@ -8,6 +8,8 @@ gem 'jquery-ui-rails'
 gem 'geocoder'
 gem 'jquery-rails'
 gem 'rails_admin', '~> 1.1.1'
+gem 'devise'
+gem "cancancan"
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
