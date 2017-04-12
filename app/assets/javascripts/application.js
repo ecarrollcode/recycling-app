@@ -113,7 +113,7 @@ function searchItemClicked() {
     var scrollToDiv = $(span).parents(".col-lg-4");
     var overlay = $(scrollToDiv).find(".item-overlay");
     $('html, body').animate({
-      scrollTop: $(scrollToDiv).offset().top
+      scrollTop: $(scrollToDiv).offset().top - 50
     }, 'slow');
   });
 }
