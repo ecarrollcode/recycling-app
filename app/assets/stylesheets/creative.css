@@ -633,6 +633,12 @@ ul.ui-autocomplete {
   font-size: 100px;
 }
 
+.big-side .big-side-content .big-side-title-organic{
+  text-align: left;
+  color: white;
+  font-size: 100px;
+}
+
 .big-side .big-side-content .big-side-title-other{
   text-align: left;
   color: white;
@@ -659,6 +665,16 @@ ul.ui-autocomplete {
 }
 
 .big-side .big-side-content .big-side-ewaste-image {
+  display: flex;
+  /*position: fixed;*/
+}
+
+.big-side .big-side-content .big-side-pharma-image {
+  display: flex;
+  /*position: fixed;*/
+}
+
+.big-side .big-side-content .big-side-organic-image {
   display: flex;
   /*position: fixed;*/
 }

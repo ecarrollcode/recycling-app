@@ -343,9 +343,8 @@
                             <div class="filter-icon special-filter" data-filter-type="special">
                                 <img src="images/filters/pickup_filter.png" class="img-responsive">
                             </div>
-                            <div class="info-icon" onclick="toggleImage();">
+                            <div class="info-icon" id="info-icon-id-organic">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
-                                
                             </div>
                             <div class="info-box" id="info-box-show" style="opacity: 0">
                             </div>
@@ -822,6 +821,9 @@
                         <div class="big-side-title-pharma">
                             Pharma
                         </div>
+                        <div class="big-side-pharma-image">
+                            <img src="images/learn/pharma/pharma.png" class="img-responsive">
+                        </div>
                         <div class="big-side-close" id="big-side-close-id-pharma" hidden>
                             Close
                         </div>
@@ -853,6 +855,46 @@
                     });
                 </script>
                 <!-- END big side bar PHARMA -->
+                <!--  BIG SIDE BAR ORGANIC -->
+                <div class="big-side" id='big-side-id-organic' hidden>
+                    <div class="big-side-content">
+                        <div class="big-side-title-organic">
+                            Oragnic
+                        </div>
+                        <div class="big-side-organic-image">
+                            <img src="images/learn/compost/compost.png" class="img-responsive">
+                        </div>
+                        <div class="big-side-close" id="big-side-close-id-organic" hidden>
+                            Close
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $("#info-icon-id-organic").click(function() {
+                        $('#big-side-close-id-organic').show();
+                        $("#big-side-id-organic").animate({width: "80vw"});
+                    });
+                </script>
+                <script>
+                    $("#big-side-close-id-organic").click(function() {
+                        $('#big-side-close-id-organic').hide();
+                        $("#big-side-id-organic").animate({width: "0vw"});
+                    });
+                </script>
+                <script>
+                    var navTop = $('#big-side-id-organic').offset().top;
+
+                    $(window).scroll(function(){
+                        if ($(this).scrollTop() >= navTop) {
+                            $('#big-side-id-organic').css('position', 'fixed');
+                            $('#big-side-id-organic').css('top', '0');
+                        } else {
+                            $('#big-side-id-organic').css('position', 'absolute');
+                            $('#big-side-id-organic').css('top', navTop);
+                        }
+                    });
+                </script>
+                <!-- END big side bar ORGANIC -->
                  <!--  BIG SIDE BAR MIXED -->
                 <div class="big-side" id='big-side-id-mixed' hidden>
                     <div class="big-side-content">
