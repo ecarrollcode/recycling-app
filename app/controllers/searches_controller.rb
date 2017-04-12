@@ -29,7 +29,6 @@ class SearchesController < ApplicationController
 
     all_items.each do |item|
       arr_item = Hash.new
-      arr_item["data_type"] = "item"
       arr_item["name"] = item.name
       arr_item["item_id"] = item.item_id
       items_arr.push(arr_item)
@@ -37,7 +36,6 @@ class SearchesController < ApplicationController
 
     all_cats.each do |cat|
       arr_item = Hash.new
-      arr_item["data_type"] = "category"
       arr_item["name"] = cat.name
       arr_item["category_id"] = cat.category_id
       items_arr.push(arr_item)
@@ -45,7 +43,6 @@ class SearchesController < ApplicationController
 
     all_centers.each do |cat|
       arr_item = Hash.new
-      arr_item["data_type"] = "center"
       arr_item["name"] = cat.name
       arr_item["plant_id"] = cat.plant_id
       items_arr.push(arr_item)
