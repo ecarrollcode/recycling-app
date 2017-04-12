@@ -76,16 +76,45 @@ function getSearch() {
             var oldTxt = jThis.text();
             jThis.html(oldTxt.replace(regX, '<span class="srchHilite">$1</span>'));
           });
+
+          addClasses(data);
         },
         classes: {
           "ui-autocomplete": "list-group-item"
         }
-      });
+      }); 
     },
     error: function(xhr,status,error){
       console.log(xhr);
       console.log(error);
     }
+  });
+}
+
+function addClasses(data) {
+  var searchResults = $('.ui-autocomplete').find('li');
+
+  searchResults.each(function() {
+    for (var i = 0; i < data.length; i++) {
+      if ($(this).html() == data[i].name) {
+        $(this).attr('data-id', data[i].item_id);
+      }
+    }
+  });
+
+  searchItemClicked();
+}
+
+function searchItemClicked() {
+  $('.ui-autocomplete').find('li').click(function() {
+    var id = $(this).data('id');
+    console.log(id);
+    var span = $("[data-item-id='" + id + "']");
+    var scrollToDiv = $(span).parents(".col-lg-4");
+    var overlay = $(scrollToDiv).find(".item-overlay");
+    $('html, body').animate({
+      scrollTop: $(scrollToDiv).offset().top
+    }, 'slow');
   });
 }
 
@@ -117,21 +146,22 @@ function navBarScrolling() {
 }
 
 // info box overlay functionality for when item is clicked
-function infoBoxOverlay() {
-  var infoBox = $('#item-info-box-show');
-  if(infoBox.css('opacity') == '0') {
-    infoBox.css('opacity') = '.9';
-  } else {
-    infoBox.css('opacity');
-  }
-}
+// function infoBoxOverlay() {
+//   var infoBox = $('#item-info-box-show');
+//   if(infoBox.css('opacity') == '0') {
+//     infoBox.css('opacity') = '.9';
+//   } else {
+//     infoBox.css('opacity');
+//   }
+// }
 
 function main() {
   $(document).ready(function() {
     filterItems();
     getSearch();
     navBarScrolling();
-    infoBoxOverlay();
+    // searchItemClicked();
+    // infoBoxOverlay();
   });
 }
 

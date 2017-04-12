@@ -83,13 +83,15 @@
                             <div class="info-icon" id="info-icon-id-plastic">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
+                            <div class="item-overlay">
+                            </div>
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
                                     Plastics
                                 </div>
                                 <div class="project-name">
                                     <% @plastic_examples.each do |plastic_example| %>
-                                        <span data-item-bin="<%= plastic_example.bin %>"><%= plastic_example.name %><%= "," unless plastic_example == @plastic_examples.last %></span>
+                                        <span data-item-bin="<%= plastic_example.bin %>" data-item-id="<%= plastic_example.item_id %>"><%= plastic_example.name %><%= "," unless plastic_example == @plastic_examples.last %></span>
                                     <% end %>
                                 </div>
                             </div>
@@ -116,13 +118,15 @@
                             <div class="info-icon" id="info-icon-id-paper">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
+                            <div class="item-overlay">
+                            </div>
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
                                     Paper and Cardboard
                                 </div>
                                 <div class="project-name">
                                     <% @papers_examples.each do |papers_example| %>
-                                        <span data-item-bin="<%= papers_example.bin %>"><%= papers_example.name %><%= "," unless papers_example == @papers_examples.last %></span>
+                                        <span data-item-bin="<%= papers_example.bin %>" data-item-id="<%= papers_example.item_id %>"><%= papers_example.name %><%= "," unless papers_example == @papers_examples.last %></span>
                                     <% end %>
                                 </div>
                             </div>
@@ -149,6 +153,8 @@
                             <div class="info-icon" id="info-icon-id-glass">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
+                            <div class="item-overlay">
+                            </div>
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
                                     Glass
@@ -156,7 +162,7 @@
                                 <div class="project-name">
                                     <div class="popup" onclick="myFunction()">
                                         <% @glass_examples.each do |glass_example| %>
-                                        <span data-item-bin="<%= glass_example.bin %>"><%= glass_example.name %><%= "," unless glass_example == @glass_examples.last %></span>
+                                        <span data-item-bin="<%= glass_example.bin %>" data-item-id="<%= glass_example.item_id %>"><%= glass_example.name %><%= "," unless glass_example == @glass_examples.last %></span>
                                         <span class="popuptext" id="myPopup"><img src="images/items/chemicals/paint.jpg" class="img-responsive">
                                         </span>
                                         <% end %>
@@ -200,7 +206,7 @@
                                 </div>
                                 <div class="project-name">
                                     <% @metals_examples.each do |metals_example| %>
-                                        <span data-item-bin="<%= metals_example.bin %>"><%= metals_example.name %><%= "," unless metals_example == @metals_examples.last %></span>
+                                        <span data-item-bin="<%= metals_example.bin %>" data-item-id="<%= metals_example.item_id %>"><%= metals_example.name %><%= "," unless metals_example == @metals_examples.last %></span>
                                     <% end %>
                                 </div>
                             </div>
@@ -311,7 +317,7 @@
                                     <!-- TESTING MAKING ITEM SHOW NEW BOX -->
                                     <% @electronics_examples.join(",") %>
                                     <% @electronics_examples.each do |electronics_example| %>
-                                        <span data-item-bin="<%= electronics_example.bin %>"><%= electronics_example.name %><%= "," unless electronics_example == @electronics_examples.last %></span>
+                                        <span data-item-bin="<%= electronics_example.bin %>" data-item-id="<%= electronics_example.item_id %>"><%= electronics_example.name %><%= "," unless electronics_example == @electronics_examples.last %></span>
                                     <% end %> 
                                 </div>
                             </div>
