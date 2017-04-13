@@ -47,6 +47,8 @@ function getSearch() {
     success: function(data){
       var item_names = [];
 
+      console.log(data);
+
       $(data).each(function(index, obj) {
         item_names.push(obj.name);
       });
@@ -98,6 +100,7 @@ function addClasses(data) {
     for (var i = 0; i < data.length; i++) {
       if ($(this).html() == data[i].name) {
         $(this).attr('data-id', data[i].item_id);
+        $(this).attr('data-category', data[i].category);
       }
     }
   });
@@ -160,7 +163,6 @@ function main() {
     filterItems();
     getSearch();
     navBarScrolling();
-    // searchItemClicked();
     // infoBoxOverlay();
   });
 }

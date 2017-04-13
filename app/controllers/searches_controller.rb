@@ -29,6 +29,7 @@ class SearchesController < ApplicationController
 
     all_items.each do |item|
       arr_item = Hash.new
+      arr_item["category"] = item.category
       arr_item["name"] = item.name
       arr_item["item_id"] = item.item_id
       items_arr.push(arr_item)
