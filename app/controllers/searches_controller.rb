@@ -19,6 +19,7 @@ class SearchesController < ApplicationController
     @mixed_examples = Item.where({category: 'mixed'})
     @other_examples = Item.where({category: 'other'})
     @client_ip = remote_ip()
+    @Location = Location.within(20, :origin => @client_ip)
   end
 
   # GET /searches/1
