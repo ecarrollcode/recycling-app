@@ -13,6 +13,20 @@
             }, 2000);
         });
     </script>
+    <script>
+        var x = document.getElementById("location");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude + 
+            "<br>Longitude: " + position.coords.longitude; 
+        }
+    </script>
 </head>
 <body id="page-top" style="background-color: #77C9D4">
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
@@ -43,10 +57,7 @@
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
-                        <a> <%= @client_ip %> </a>
-                    </li>
-                    <li>
-                        <a> <%= @Location %> </a>
+                        <a> <%= @res.city %> </a>
                     </li>
                 </ul>
             </div>
@@ -62,8 +73,15 @@
                 <form>
                     <input type="text" name="search" value = "" placeholder="Search..">
                 </form>
-                <br>
                 <a href="#bins" class="btn btn-primary btn-xl page-scroll" id="clicks">Search</a>
+                <br>
+            </div>
+            <div class="header-content-inner">
+                <h2 id="secondHeading">What city do you want to know about?</h2>
+                <form>
+                    <input type="text" name="location" value = "" placeholder="Enter your location..">
+                </form>
+                <button class = "btn btn-primary btn-xl page-scroll" onclick="getLocation()">Use Current Location</button>
             </div>
         </div>
     </header>

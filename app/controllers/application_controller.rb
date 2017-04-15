@@ -12,4 +12,9 @@ class ApplicationController < ActionController::Base
       request.remote_ip
     end
   end
+
+  def get_city(lat, long)
+    Geokit::Geocoders::GoogleGeocoder.reverse_geocode "37.791821,-122.394679"
+
+  end
 end

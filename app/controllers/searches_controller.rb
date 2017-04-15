@@ -20,6 +20,7 @@ class SearchesController < ApplicationController
     @other_examples = Item.where({category: 'other'})
     @client_ip = remote_ip()
     @Location = Location.within(20, :origin => @client_ip)
+    @res=Geokit::Geocoders::GoogleGeocoder.reverse_geocode "37.791821,-122.394679"
   end
 
   # GET /searches/1
