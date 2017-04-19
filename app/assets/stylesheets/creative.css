@@ -677,6 +677,10 @@ ul.ui-autocomplete {
   display: flex;
   /*position: fixed;*/
 }
+.big-side .big-side-content .big-side-mixed-image {
+  display: flex;
+  /*position: fixed;*/
+}
 
 .big-side .big-side-content .big-side-organic-image {
   display: flex;
