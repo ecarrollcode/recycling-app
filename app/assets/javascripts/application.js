@@ -19,8 +19,41 @@
 
 // filter items functionality
 function filterItems() {
+  var recycleIsClicked = false;
+  var compostIsClicked = false;
+  var trashIsClicked = false;
+  var specialIsClicked = false;
+  console.log(recycleIsClicked);
   $('.filter-icon').click(function() {
     $filter_type = $(this).data('filter-type');
+    if ($(this).hasClass("recycle-filter") && recycleIsClicked == false) {
+      $(".recycle-filter-img").attr("src", "images/filters/recycle_filter_clicked.png")
+      recycleIsClicked = true;
+    } else if ($(this).hasClass("recycle-filter") && recycleIsClicked == true) {
+      $(".recycle-filter-img").attr("src", "images/filters/recycle_filter.png")
+      recycleIsClicked = false;
+    }
+    if ($(this).hasClass("compost-filter") && compostIsClicked == false) {
+      $(".compost-filter-img").attr("src", "images/filters/compost_filter_clicked.png")
+      compostIsClicked = true;
+    } else if ($(this).hasClass("compost-filter") && compostIsClicked == true) {
+      $(".compost-filter-img").attr("src", "images/filters/compost_filter.png")
+      compostIsClicked = false;
+    }
+    if ($(this).hasClass("trash-filter") && trashIsClicked == false) {
+      $(".trash-filter-img").attr("src", "images/filters/trash_filter_clicked.png")
+      trashIsClicked = true;
+    } else if ($(this).hasClass("trash-filter") && trashIsClicked == true) {
+      $(".trash-filter-img").attr("src", "images/filters/trash_filter.png")
+      trashIsClicked = false;
+    }
+    if ($(this).hasClass("special-filter") && specialIsClicked == false) {
+      $(".special-filter-img").attr("src", "images/filters/pickup_filter_clicked.png")
+      specialIsClicked = true;
+    } else if ($(this).hasClass("special-filter") && specialIsClicked == true) {
+      $(".special-filter-img").attr("src", "images/filters/pickup_filter.png")
+      specialIsClicked = false;
+    }
     console.log($filter_type);
     $item_spans = $(this).parent().find("span");
     $item_spans.each(function() {

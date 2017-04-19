@@ -104,16 +104,16 @@
                         <img src="images/portfolio/thumbnails/2_.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                              <div class="filter-icon recycle-filter" data-filter-type="recycle">
-                                <img src="images/filters/recycle_filter.png" class="img-responsive">
+                                <img src="images/filters/recycle_filter.png" class="recycle-filter-img img-responsive">
                             </div>
                             <div class="filter-icon compost-filter" data-filter-type="compost">
-                                <img src="images/filters/compost_filter.png" class="img-responsive">
+                                <img src="images/filters/compost_filter.png" class="compost-filter-img img-responsive">
                             </div>
                             <div class="filter-icon trash-filter" data-filter-type="trash">
-                                <img src="images/filters/trash_filter.png" class="img-responsive">
+                                <img src="images/filters/trash_filter.png" class="trash-filter-img img-responsive">
                             </div>
                             <div class="filter-icon special-filter" data-filter-type="special">
-                                <img src="images/filters/pickup_filter.png" class="img-responsive">
+                                <img src="images/filters/pickup_filter.png" class="special-filter-img img-responsive">
                             </div>
                             <div class="info-icon" id="info-icon-id-paper">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
@@ -238,17 +238,7 @@
                                     Chemicals and Oils
                                 </div>
                                 <div class="project-name">
-                                    <!-- attempings to make popup for an image to show per word -->
-                                    <div class="popup" onclick="myFunction()">paint
-                                        <span class="popuptext" id="myPopup"><img src="images/items/chemicals/paint.jpg" class="img-responsive"></span>
-                                    </div>
-                                    <script>
-                                    // When the user clicks on div, open the popup
-                                    function myFunction() {
-                                        var popup = document.getElementById("myPopup");
-                                        popup.classList.toggle("show");
-                                    }
-                                    </script>
+                                    
                                     Some chemicals and some oils
                                 </div>
                             </div>
@@ -280,7 +270,9 @@
                                     Hazardous
                                 </div>
                                 <div class="project-name">
-                                    what are some hazardous items
+                                    <% @hazardous_examples.each do |hazardous_example| %>
+                                        <span data-item-bin="<%= hazardous_example.bin %>" data-item-id="<%= hazardous_example.item_id %>"><%= hazardous_example.name %><%= "," unless hazardous_example == @hazardous_examples.last %></span>
+                                    <% end %>
                                 </div>
                             </div>
                         </div>
@@ -359,7 +351,9 @@
                                     Organic
                                 </div>
                                 <div class="project-name">
-                                    Food and such
+                                    <% @organic_examples.each do |organic_example| %>
+                                        <span data-item-bin="<%= organic_example.bin %>" data-item-id="<%= organic_example.item_id %>"><%= organic_example.name %><%= "," unless organic_example == @organic_examples.last %></span>
+                                    <% end %>
                                 </div>
                             </div>
                         </div>
@@ -404,7 +398,9 @@
                                     Bulk
                                 </div>
                                 <div class="project-name">
-                                    Fridges, couches, chairs, ovens, ect.
+                                    <% @bulk_examples.each do |bulk_example| %>
+                                        <span data-item-bin="<%= bulk_example.bin %>" data-item-id="<%= bulk_example.item_id %>"><%= bulk_example.name %><%= "," unless bulk_example == @bulk_examples.last %></span>
+                                    <% end %>
                                 </div>
                             </div>
                         </div>
@@ -435,7 +431,9 @@
                                     Pharmaceuticals
                                 </div>
                                 <div class="project-name">
-                                    Pills and the like
+                                    <% @pharmaceuticals_examples.each do |pharmaceuticals_example| %>
+                                        <span data-item-bin="<%= pharmaceuticals_example.bin %>" data-item-id="<%= pharmaceuticals_example.item_id %>"><%= pharmaceuticals_example.name %><%= "," unless pharmaceuticals_example == @pharmaceuticals_examples.last %></span>
+                                    <% end %>
                                 </div>
                             </div>
                         </div>
@@ -466,7 +464,9 @@
                                     Mixed
                                 </div>
                                 <div class="project-name">
-                                    idk what this even means
+                                    <% @mixed_examples.each do |mixed_example| %>
+                                        <span data-item-bin="<%= mixed_example.bin %>" data-item-id="<%= mixed_example.item_id %>"><%= mixed_example.name %><%= "," unless mixed_example == @mixed_examples.last %></span>
+                                    <% end %>
                                 </div>
                             </div>
                         </div>
@@ -497,7 +497,9 @@
                                     Other
                                 </div>
                                 <div class="project-name">
-                                    the stuff that just doesnt fit
+                                    <% @other_examples.each do |other_example| %>
+                                        <span data-item-bin="<%= other_example.bin %>" data-item-id="<%= other_example.item_id %>"><%= other_example.name %><%= "," unless other_example == @other_examples.last %></span>
+                                    <% end %>
                                 </div>
                             </div>
                         </div>
