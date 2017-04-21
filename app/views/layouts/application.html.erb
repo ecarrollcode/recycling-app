@@ -489,7 +489,7 @@
                     </a>
                 </div>
                  <!--  BIG SIDE BAR BULK -->
-                <div class="big-side follow-scroll" id='big-side-id' hidden>
+                <div class="big-side follow-scroll" id='big-side-id-bulk' hidden>
                     <div class="big-side-content">
                         <div class="big-side-title">
                             About Bulk
@@ -510,21 +510,21 @@
                             </a>
                             </div>
                         </div>
-                        <div class="big-side-close" id="big-side-close-id" hidden>
+                        <div class="big-side-close" id="big-side-close-id-bulk" hidden>
                             Close
                         </div>
                     </div>
                 </div>
                 <script>
                     $("#info-icon-id-bulk").click(function() {
-                        $('.big-side-close').show();
-                        $("#big-side-id").animate({width: "80vw"});
+                        $('#big-side-close-id-bulk').show();
+                        $("#big-side-id-bulk").animate({width: "80vw"});
                     });
                 </script>
                 <script>
-                    $("#big-side-close-id").click(function() {
-                        $('.big-side-close').hide();
-                        $("#big-side-id").animate({width: "0vw"});
+                    $("#big-side-close-id-bulk").click(function() {
+                        $('#big-side-close-id-bulk').hide();
+                        $("#big-side-id-bulk").animate({width: "0vw"});
                     });
                 </script>
                 <!-- BULK BAR SCROLLING -->
