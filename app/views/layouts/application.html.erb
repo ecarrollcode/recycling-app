@@ -70,11 +70,30 @@
             <div class="header-content-inner">
                 <h1 id="homeHeading">What do you want to recycle?</h1>
                 <br>
-                <form>
-                    <input type="text" name="search" value = "" placeholder="Search..">
-                </form>
-                <a href="#bins" class="btn btn-primary btn-xl page-scroll" id="clicks">Search</a>
+                <%= form_tag(searches_path, :method => "get", id: "search-form") do %>
+                    <div class="row">
+                        <div class="col">
+                            <div class="input-group">
+                            <%= text_field_tag :search_bar, params[:search_bar], placeholder: "Search..", class: "form-control search-bar"%>
+                                <div class="input-group-btn">
+                                  <select type="button" name="search_category" class="btn btn-default search-type"><span class="caret"></span>
+                                      <option value="1">Centers</option>
+                                      <option value="2">Items</option>
+                                      <option value="3">Bins</option>
+                                  </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <%= submit_tag "Search", :name => nil, class: "btn btn-primary btn-xl dropdown-toggle search-btn" %>
+                    <% end %>
+                </div>
                 <br>
+                <% @results.each do |result| %>
+                    <%= result %><%= "," unless result == @results.last %>
+                <% end %>
+                <br>
+            <br>
             </div>
             <div class="header-content-inner">
                 <h2 id="secondHeading">What city do you want to know about?</h2>

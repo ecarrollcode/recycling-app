@@ -21,6 +21,39 @@ class SearchesController < ApplicationController
     @client_ip = remote_ip()
     @Location = Location.within(20, :origin => @client_ip)
     @res=Geokit::Geocoders::GoogleGeocoder.reverse_geocode "37.791821,-122.394679"
+
+
+    if params.has_key?(:search_category)
+      @selection = params[:search_category]
+    end
+
+    @results = []
+
+    if params[:search_bar]
+      if @selection == "1"
+        @search = RecyclingPlant.search(params[:search_bar])
+        if @search.present?
+          @results = @search.map(&:name)
+        else
+          @results = ["No results"]
+        end
+      elsif @selection == "2"
+        @search = Item.search(params[:search_bar])
+        if @search.present?
+          @results = @search.map(&:name)
+        else
+          @results = ["No results"]
+        end
+      elsif @selection == "3"
+        @search = Category.search(params[:search_bar])
+        if @search.present?
+          @results = @search.map(&:name)
+        else
+          @results = ["No results"]
+        end
+      end
+    end
+
   end
 
   # GET /searches/1
