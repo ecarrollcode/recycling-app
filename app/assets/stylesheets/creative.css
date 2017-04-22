@@ -858,6 +858,10 @@ ul.ui-autocomplete {
 
 }
 
+.item-span {
+  cursor: pointer;
+}
+
 .child-div {
   background-color: green;
   height: 100%;
