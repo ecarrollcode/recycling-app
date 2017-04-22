@@ -118,7 +118,10 @@
                             <div class="info-icon" id="info-icon-id-paper">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
-                            <div class="item-overlay">
+                            <div class="child-div" hidden>
+                                <div class="close-overlay-btn">
+                                x
+                                </div>
                             </div>
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -126,7 +129,7 @@
                                 </div>
                                 <div class="project-name">
                                     <% @papers_examples.each do |papers_example| %>
-                                        <span data-item-bin="<%= papers_example.bin %>" data-item-id="<%= papers_example.item_id %>"><%= papers_example.name %><%= "," unless papers_example == @papers_examples.last %></span>
+                                        <span class="item-span" data-item-bin="<%= papers_example.bin %>" data-item-id="<%= papers_example.item_id %>"><%= papers_example.name %><%= "," unless papers_example == @papers_examples.last %></span>
                                     <% end %>
                                 </div>
                             </div>

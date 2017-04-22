@@ -240,11 +240,26 @@ function initMap() {
   });
 }
 
+function overlay() {
+  // $('.child-div').hide();
+  $('.item-span').click(function() {
+    $('.child-div').fadeIn(400, function() {
+      $('.child-div').show();
+    });
+  });
+  $('.close-overlay-btn').click(function() {
+    $('.child-div').fadeOut(400, function() {
+      $('.child-div').hide();
+    });
+  });
+}
+
 function main() {
   $(document).ready(function() {
     filterItems();
     getSearch();
     navBarScrolling();
+    overlay();
     addGoogleMapsAPI();
     initMap();
   });
