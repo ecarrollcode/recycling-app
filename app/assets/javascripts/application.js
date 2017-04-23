@@ -240,12 +240,20 @@ function initMap() {
   });
 }
 
+function cleanOverlayHeader(str) {
+  // remove commas
+  str = str.replace(/[, ]+/g, " ").trim();
+  // capitalize words
+  str = str.replace(/\b\w/g, l => l.toUpperCase());
+  return str;
+}
+
 function overlay() {
-  // $('.child-div').hide();
   $('.item-span').click(function() {
     $('.child-div').fadeIn(400, function() {
       $('.child-div').show();
     });
+    $('.overlay-header').html(cleanOverlayHeader($(this).html()));
   });
   $('.close-overlay-btn').click(function() {
     $('.child-div').fadeOut(400, function() {

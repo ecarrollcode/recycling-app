@@ -870,6 +870,11 @@ ul.ui-autocomplete {
   z-index: 999;
 }
 
+.overlay-header {
+  color: white;
+  font-size: 30px;
+}
+
 .close-overlay-btn {
   color: white;
   cursor: pointer;
