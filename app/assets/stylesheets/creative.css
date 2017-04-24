@@ -862,7 +862,7 @@ ul.ui-autocomplete {
   cursor: pointer;
 }
 
-.child-div {
+.item-overlay{
   background-color: green;
   height: 100%;
   position: absolute;

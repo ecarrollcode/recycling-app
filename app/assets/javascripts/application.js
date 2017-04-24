@@ -255,16 +255,17 @@ function cleanOverlayHeader(str) {
 
 function overlay() {
   $('.item-span').click(function() {
+    var itemOverlay = $(this).parents('.portfolio-box-caption').find('.item-overlay');
     $('.hovered').removeClass('hovered');
     $(this).parents('.portfolio-box').addClass('hovered');
-    $('.child-div').fadeIn(400, function() {
-      $('.child-div').show();
+    $(itemOverlay).fadeIn(400, function() {
+      $(this).show();
     });
     $('.overlay-header').html(cleanOverlayHeader($(this).html()));
   });
   $('.close-overlay-btn').click(function() {
-    $('.child-div').fadeOut(400, function() {
-      $('.child-div').hide();
+    $(this).parent().fadeOut(400, function() {
+      $(this).hide();
       $('.hovered').removeClass('hovered');
     });
   });

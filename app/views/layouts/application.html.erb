@@ -83,7 +83,12 @@
                             <div class="info-icon" id="info-icon-id-plastic">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
-                            <div class="item-overlay">
+                            <div class="item-overlay" hidden>
+                                <div class="close-overlay-btn">
+                                    x
+                                </div>
+                                <div class="overlay-header">
+                                </div>
                             </div>
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -118,7 +123,7 @@
                             <div class="info-icon" id="info-icon-id-paper">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
-                            <div class="child-div" hidden>
+                            <div class="item-overlay" hidden>
                                 <div class="close-overlay-btn">
                                     x
                                 </div>
@@ -165,21 +170,13 @@
                                     Glass
                                 </div>
                                 <div class="project-name">
-                                    <div class="popup" onclick="myFunction()">
+                                    <div class="popup">
                                         <% @glass_examples.each do |glass_example| %>
                                         <span data-item-bin="<%= glass_example.bin %>" data-item-id="<%= glass_example.item_id %>"><%= glass_example.name %><%= "," unless glass_example == @glass_examples.last %></span>
                                         <span class="popuptext" id="myPopup"><img src="images/items/chemicals/paint.jpg" class="img-responsive">
                                         </span>
                                         <% end %>
                                     </div>
-                    
-                                    <script>
-                                    // When the user clicks on div, open the popup
-                                    function myFunction() {
-                                        var popup = document.getElementById("myPopup");
-                                        popup.classList.toggle("show");
-                                    }
-                                    </script>
                                 </div>
                             </div>
                         </div>
