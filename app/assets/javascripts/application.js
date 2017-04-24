@@ -280,11 +280,12 @@ function overlay() {
       }
     });
 
-    $('.overlay-bin').html("Bin: " + $(this).data('item-bin'));
-    $('.overlay-info').html("Info: " + currItemInfo);
+    // $('.overlay-bin').html("Bin: " + $(this).data('item-bin'));
+    $('.overlay-info').html(currItemInfo);
     
     if($(this).data('item-bin') == 'recycle') {
       $(".item-overlay").css("background-color","rgb(15,107,213)");
+      $(".overlay-bin-img").attr("src", "images/filters/recycle_bin.png")
     } else if ($(this).data('item-bin') == 'compost') {
       $(".item-overlay").css("background-color","rgb(65,117,5)");
     } else if ($(this).data('item-bin') == 'trash') {
