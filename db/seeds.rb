@@ -17,7 +17,7 @@ City.create!([
   {city_id: 1, name: "Claremont, CA", website: "http://www.ci.claremont.ca.us/government/departments-divisions/community-services/trash-and-recycling", gps_coords: "34.0966764,-117.71977850000002"}
 ])
 Item.create!([
-  {item_id: 1, name: "junk mail", category: "papers", bin: "recycle", info: "According to the EPA, every year, over 4 milliont ons of junkmail are producted. Remove yourself from mailing lists to reduce your environmental impact.", cities: "Claremont, CA", recycling_plants: "RP1", img_path: ""},
+  {item_id: 1, name: "junk mail", category: "papers", bin: "recycle", info: "According to the EPA, every year, over 4 millions of junkmail are producted. Remove yourself from mailing lists to reduce your environmental impact.", cities: "Claremont, CA", recycling_plants: "RP1", img_path: ""},
   {item_id: 2, name: "telephone books", category: "papers", bin: "recycle", info: "Look in the front or back of the telephone book to see recycling information.", cities: "Claremont, CA", recycling_plants: "RP1", img_path: ""},
   {item_id: 3, name: "catalogs", category: "papers", bin: "recycle", info: "", cities: "Claremont, CA", recycling_plants: "", img_path: ""},
   {item_id: 4, name: "computer paper", category: "papers", bin: "recycle", info: "", cities: "Claremont, CA", recycling_plants: "RP1", img_path: ""},
