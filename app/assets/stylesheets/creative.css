@@ -863,7 +863,7 @@ ul.ui-autocomplete {
 }
 
 .item-overlay{
-  background-color: green;
+  background-color: black;
   height: 100%;
   position: absolute;
   width: 100%;
@@ -873,6 +873,16 @@ ul.ui-autocomplete {
 .overlay-header {
   color: white;
   font-size: 30px;
+}
+
+.overlay-bin {
+  color: white;
+  font-size: 20px;
+}
+
+.overlay-info {
+  color: white;
+  font-size: 20px;
 }
 
 .close-overlay-btn {

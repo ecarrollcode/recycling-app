@@ -262,6 +262,21 @@ function overlay() {
       $(this).show();
     });
     $('.overlay-header').html(cleanOverlayHeader($(this).html()));
+    
+    $('.overlay-bin').html("Bin: " + $(this).data('item-bin'));
+    $('.overlay-info').html("Info: " + $(this).data('item-info'));
+    
+    if($(this).data('item-bin') == 'recycle') {
+      $(".item-overlay").css("background-color","rgb(15,107,213)");
+    } else if ($(this).data('item-bin') == 'compost') {
+      $(".item-overlay").css("background-color","rgb(65,117,5)");
+    } else if ($(this).data('item-bin') == 'trash') {
+      $(".item-overlay").css("background-color","rgb(74,74,74)");
+    } else if ($(this).data('item-bin') == 'special pickup') {
+      $(".item-overlay").css("background-color","rgb(245,166,35)");
+    }
+
+
   });
   $('.close-overlay-btn').click(function() {
     $(this).parent().fadeOut(400, function() {
