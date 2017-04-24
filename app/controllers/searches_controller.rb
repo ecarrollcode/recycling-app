@@ -52,6 +52,14 @@ class SearchesController < ApplicationController
           @results = ["No results"]
         end
       end
+      if params[:location_search_bar]
+        @search = City.search(params[:location_search_bar])
+        if @search.present?
+          @results = @search.map(&:name)
+        else
+          @results = ["No results"]
+        end
+      end
     end
 
   end

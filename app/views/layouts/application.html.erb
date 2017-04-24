@@ -97,9 +97,27 @@
             </div>
             <div class="header-content-inner">
                 <h2 id="secondHeading">What city do you want to know about?</h2>
-                <form>
-                    <input type="text" name="location" value = "" placeholder="Enter your location..">
-                </form>
+                <%= form_tag(searches_path, :method => "get", id: "location-search-form") do %>
+                    <div class="row">
+                        <div class="col">
+                            <div class="input-group">
+                            <%= text_field_tag :location_search_bar, params[:location_search_bar], placeholder: "Enter your location..", class: "form-control search-bar"%>
+                                <div class="input-group-btn">
+                                  <select type="button" name="search_category" class="btn btn-default search-type"><span class="caret"></span>
+                                  </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <%= submit_tag "Search", :name => nil, class: "btn btn-primary btn-xl dropdown-toggle search-btn" %>
+                    <% end %>
+                </div>
+                <br>
+                <% @results.each do |result| %>
+                    <%= result %><%= "," unless result == @results.last %>
+                <% end %>
+                <br>
+            <br>
                 <button class = "btn btn-primary btn-xl page-scroll" onclick="getLocation()">Use Current Location</button>
             </div>
         </div>
