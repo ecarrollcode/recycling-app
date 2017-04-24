@@ -23,7 +23,6 @@ function filterItems() {
   var compostIsClicked = false;
   var trashIsClicked = false;
   var specialIsClicked = false;
-  console.log(recycleIsClicked);
   $('.filter-icon').click(function() {
     $filter_type = $(this).data('filter-type');
     if ($(this).hasClass("recycle-filter") && recycleIsClicked == false) {
@@ -54,7 +53,6 @@ function filterItems() {
       $(".special-filter-img").attr("src", "images/filters/pickup_filter.png")
       specialIsClicked = false;
     }
-    console.log($filter_type);
     $item_spans = $(this).parent().find("span");
     $item_spans.each(function() {
       if ($(this).data("item-bin") != $filter_type) {
@@ -79,8 +77,6 @@ function getSearch() {
     url: '/searches/get_ajx',
     success: function(data){
       var item_names = [];
-
-      console.log(data);
 
       $(data).each(function(index, obj) {
         item_names.push(obj.name);
@@ -144,7 +140,6 @@ function addClasses(data) {
 function searchItemClicked() {
   $('.ui-autocomplete').find('li').click(function() {
     var id = $(this).data('id');
-    console.log(id);
     var span = $("[data-item-id='" + id + "']");
     var scrollToDiv = $(span).parents(".col-lg-4");
     var overlay = $(scrollToDiv).find(".item-overlay");
