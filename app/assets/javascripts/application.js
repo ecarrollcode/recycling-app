@@ -288,10 +288,13 @@ function overlay() {
       $(".overlay-bin-img").attr("src", "images/filters/recycle_bin.png")
     } else if ($(this).data('item-bin') == 'compost') {
       $(".item-overlay").css("background-color","rgb(65,117,5)");
+      $(".overlay-bin-img").attr("src", "images/filters/compost_bin.png")
     } else if ($(this).data('item-bin') == 'trash') {
       $(".item-overlay").css("background-color","rgb(74,74,74)");
+      $(".overlay-bin-img").attr("src", "images/filters/trash_bin.png")
     } else if ($(this).data('item-bin') == 'special pickup') {
       $(".item-overlay").css("background-color","rgb(245,166,35)");
+      $(".overlay-bin-img").attr("src", "images/filters/special_bin.png")
     }
 
 
