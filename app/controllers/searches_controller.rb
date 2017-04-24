@@ -42,10 +42,11 @@ class SearchesController < ApplicationController
       items_arr.push(arr_item)
     end
 
-    all_centers.each do |cat|
+    all_centers.each do |center|
       arr_item = Hash.new
-      arr_item["name"] = cat.name
-      arr_item["plant_id"] = cat.plant_id
+      arr_item["name"] = center.name
+      arr_item["plant_id"] = center.plant_id
+      arr_item["gps_coords"] = center.gps_coords
       items_arr.push(arr_item)
     end
 
