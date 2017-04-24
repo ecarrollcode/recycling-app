@@ -875,6 +875,11 @@ ul.ui-autocomplete {
   font-size: 30px;
 }
 
+.overlay-bin {
+  color: white;
+  font-size: 30px;
+}
+
 .close-overlay-btn {
   color: white;
   cursor: pointer;

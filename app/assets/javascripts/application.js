@@ -262,6 +262,7 @@ function overlay() {
       $(this).show();
     });
     $('.overlay-header').html(cleanOverlayHeader($(this).html()));
+    $('.overlay-bin').html("Bin: " + $(this).data('item-bin'));
   });
   $('.close-overlay-btn').click(function() {
     $(this).parent().fadeOut(400, function() {
