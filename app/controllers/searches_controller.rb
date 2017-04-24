@@ -52,6 +52,21 @@ class SearchesController < ApplicationController
     render :json => items_arr, :status => :ok
   end
 
+  def get_ajx_item_infos
+    all_items = Item.all()
+
+    items_arr = Array.new
+
+    all_items.each do |item|
+      arr_item = Hash.new
+      arr_item["info"] = item.info
+      arr_item["item_id"] = item.item_id
+      items_arr.push(arr_item)
+    end
+
+    render :json => items_arr, :status => :ok
+  end
+
   # GET /searches/1
   # GET /searches/1.json
   def show
