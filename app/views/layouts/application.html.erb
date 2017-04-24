@@ -96,7 +96,7 @@
                                 </div>
                                 <div class="project-name">
                                     <% @plastic_examples.each do |plastic_example| %>
-                                        <span data-item-bin="<%= plastic_example.bin %>" data-item-id="<%= plastic_example.item_id %>"><%= plastic_example.name %><%= "," unless plastic_example == @plastic_examples.last %></span>
+                                        <span class="item-span" data-item-bin="<%= plastic_example.bin %>" data-item-id="<%= plastic_example.item_id %>"><%= plastic_example.name %><%= "," unless plastic_example == @plastic_examples.last %></span>
                                     <% end %>
                                 </div>
                             </div>
@@ -279,13 +279,20 @@
                             <div class="info-icon" id="info-icon-id-hazard">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
+                            <div class="item-overlay" hidden>
+                                <div class="close-overlay-btn">
+                                    x
+                                </div>
+                                <div class="overlay-header">
+                                </div>
+                            </div>
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
                                     Hazardous
                                 </div>
                                 <div class="project-name">
                                     <% @hazardous_examples.each do |hazardous_example| %>
-                                        <span data-item-bin="<%= hazardous_example.bin %>" data-item-id="<%= hazardous_example.item_id %>"><%= hazardous_example.name %><%= "," unless hazardous_example == @hazardous_examples.last %></span>
+                                        <span class="item-span" data-item-bin="<%= hazardous_example.bin %>" data-item-id="<%= hazardous_example.item_id %>"><%= hazardous_example.name %><%= "," unless hazardous_example == @hazardous_examples.last %></span>
                                     <% end %>
                                 </div>
                             </div>
@@ -354,15 +361,20 @@
                             <div class="info-icon" id="info-icon-id-organic">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
-                           <!--  <div class="info-box" id="info-box-show" style="opacity: 0">
-                            </div> -->
+                            <div class="item-overlay" hidden>
+                                <div class="close-overlay-btn">
+                                    x
+                                </div>
+                                <div class="overlay-header">
+                                </div>
+                            </div>
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
                                     Organic
                                 </div>
                                 <div class="project-name">
                                     <% @organic_examples.each do |organic_example| %>
-                                        <span data-item-bin="<%= organic_example.bin %>" data-item-id="<%= organic_example.item_id %>"><%= organic_example.name %><%= "," unless organic_example == @organic_examples.last %></span>
+                                        <span class="item-span" data-item-bin="<%= organic_example.bin %>" data-item-id="<%= organic_example.item_id %>"><%= organic_example.name %><%= "," unless organic_example == @organic_examples.last %></span>
                                     <% end %>
                                 </div>
                             </div>
@@ -389,18 +401,20 @@
                             <div class="info-icon" id="info-icon-id-bulk">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
-                            <!-- 
-                            <div class="info-icon" onclick="showBigSide();">
-                                <img src="images/filters/info_icon.png" class="img-responsive"> 
+                            <div class="item-overlay" hidden>
+                                <div class="close-overlay-btn">
+                                    x
+                                </div>
+                                <div class="overlay-header">
+                                </div>
                             </div>
-                             -->
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
                                     Bulk
                                 </div>
                                 <div class="project-name">
                                     <% @bulk_examples.each do |bulk_example| %>
-                                        <span data-item-bin="<%= bulk_example.bin %>" data-item-id="<%= bulk_example.item_id %>"><%= bulk_example.name %><%= "," unless bulk_example == @bulk_examples.last %></span>
+                                        <span class="item-span" data-item-bin="<%= bulk_example.bin %>" data-item-id="<%= bulk_example.item_id %>"><%= bulk_example.name %><%= "," unless bulk_example == @bulk_examples.last %></span>
                                     <% end %>
                                 </div>
                             </div>
@@ -493,13 +507,20 @@
                             <div class="info-icon" id="info-icon-id-other">
                                 <img src="images/filters/info_icon.png" class="img-responsive">
                             </div>
+                            <div class="item-overlay" hidden>
+                                <div class="close-overlay-btn">
+                                    x
+                                </div>
+                                <div class="overlay-header">
+                                </div>
+                            </div>
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
                                     Other
                                 </div>
                                 <div class="project-name">
                                     <% @other_examples.each do |other_example| %>
-                                        <span data-item-bin="<%= other_example.bin %>" data-item-id="<%= other_example.item_id %>"><%= other_example.name %><%= "," unless other_example == @other_examples.last %></span>
+                                        <span class="item-span" data-item-bin="<%= other_example.bin %>" data-item-id="<%= other_example.item_id %>"><%= other_example.name %><%= "," unless other_example == @other_examples.last %></span>
                                     <% end %>
                                 </div>
                             </div>
