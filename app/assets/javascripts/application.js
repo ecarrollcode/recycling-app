@@ -254,6 +254,14 @@ function cleanOverlayHeader(str) {
 }
 
 function overlay() {
+  var itemInfosArr = [];
+  $.ajax({
+    type: 'GET',
+    url: '/searches/get_ajx_item_infos',
+    success: function(data) {
+      itemInfosArr = data;
+    }
+  });
   $('.item-span').click(function() {
     var itemOverlay = $(this).parents('.portfolio-box-caption').find('.item-overlay');
     $('.hovered').removeClass('hovered');
@@ -262,9 +270,18 @@ function overlay() {
       $(this).show();
     });
     $('.overlay-header').html(cleanOverlayHeader($(this).html()));
-    
+
+    var currItemInfo;
+    var currentItemId = $(this).data('item-id');
+
+    $.each(itemInfosArr, function( index, value ) {
+      if (value.item_id == currentItemId) {
+        currItemInfo = value.info;
+      }
+    });
+
     $('.overlay-bin').html("Bin: " + $(this).data('item-bin'));
-    $('.overlay-info').html("Info: " + $(this).data('item-info'));
+    $('.overlay-info').html("Info: " + currItemInfo);
     
     if($(this).data('item-bin') == 'recycle') {
       $(".item-overlay").css("background-color","rgb(15,107,213)");
