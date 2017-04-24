@@ -148,9 +148,14 @@ function searchItemClicked() {
     var span = $("[data-item-id='" + id + "']");
     var scrollToDiv = $(span).parents(".col-lg-4");
     var overlay = $(scrollToDiv).find(".item-overlay");
+    var portBox = $(scrollToDiv).find(".portfolio-box");
+    span.click();
     $('html, body').animate({
       scrollTop: $(scrollToDiv).offset().top - 50
-    }, 'slow');
+    }, 'slow', function() {
+      $('.hovered').removeClass('hovered');
+      $(portBox).addClass('hovered');
+    });
   });
 }
 
@@ -250,6 +255,8 @@ function cleanOverlayHeader(str) {
 
 function overlay() {
   $('.item-span').click(function() {
+    $('.hovered').removeClass('hovered');
+    $(this).parents('.portfolio-box').addClass('hovered');
     $('.child-div').fadeIn(400, function() {
       $('.child-div').show();
     });
@@ -258,6 +265,7 @@ function overlay() {
   $('.close-overlay-btn').click(function() {
     $('.child-div').fadeOut(400, function() {
       $('.child-div').hide();
+      $('.hovered').removeClass('hovered');
     });
   });
 }
