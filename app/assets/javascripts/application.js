@@ -124,12 +124,17 @@ function getSearch() {
 
 function addClasses(data) {
   var searchResults = $('.ui-autocomplete').find('li');
+  // console.log(data);
 
   searchResults.each(function() {
     for (var i = 0; i < data.length; i++) {
       if ($(this).html() == data[i].name) {
         $(this).attr('data-id', data[i].item_id);
         $(this).attr('data-category', data[i].category);
+      }
+      if ($(this).html() == data[i].name && data[i].plant_id) {
+        $(this).attr('data-table', 'centers');
+        $(this).attr('data-coords', data[i].gps_coords);
       }
     }
   });
@@ -139,6 +144,14 @@ function addClasses(data) {
 
 function searchItemClicked() {
   $('.ui-autocomplete').find('li').click(function() {
+    if ($(this).data('table') == 'centers') {
+      $('html, body').animate({
+        scrollTop: $("#map").offset().top
+      }, 'slow');
+      var centerName = $(this).html();
+      var coords = $(this).data("coords");
+      addGoogleMapsItem(centerName, coords);
+    }
     var id = $(this).data('id');
     var span = $("[data-item-id='" + id + "']");
     var scrollToDiv = $(span).parents(".col-lg-4");
@@ -151,6 +164,34 @@ function searchItemClicked() {
       $('.hovered').removeClass('hovered');
       $(portBox).addClass('hovered');
     });
+  });
+}
+
+function addGoogleMapsItem(name, coords) {
+  var res = coords.split(",");
+  var xCoord = parseFloat(res[0]);
+  var yCoord = parseFloat(res[1]);
+
+  var r_center = {lat: xCoord, lng: yCoord};
+  // var r_center = new google.maps.LatLng(xCoord, yCoord);
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 15,
+    scrollwheel: false,
+    center: r_center,
+    mapTypeControl: false,
+    streetViewControl: false
+  });
+  var cu
+  var center = new google.maps.Marker({
+    position: r_center,
+    map: map
+  });
+  center.setMap(map);
+  var infowindow = new google.maps.InfoWindow({
+    content: name
+  });
+  google.maps.event.addListener(center, 'click', function() {
+    infowindow.open(map, center);
   });
 }
 
@@ -248,15 +289,17 @@ function cleanOverlayHeader(str) {
   return str;
 }
 
-function overlay() {
-  var itemInfosArr = [];
+function getItemInfos() {
   $.ajax({
     type: 'GET',
     url: '/searches/get_ajx_item_infos',
     success: function(data) {
-      itemInfosArr = data;
+      overlay(data);
     }
   });
+}
+
+function overlay(data) {
   $('.item-span').click(function() {
     var itemOverlay = $(this).parents('.portfolio-box-caption').find('.item-overlay');
     $('.hovered').removeClass('hovered');
@@ -269,7 +312,7 @@ function overlay() {
     var currItemInfo;
     var currentItemId = $(this).data('item-id');
 
-    $.each(itemInfosArr, function( index, value ) {
+    $.each(data, function( index, value ) {
       if (value.item_id == currentItemId) {
         currItemInfo = value.info;
       }
@@ -341,7 +384,7 @@ function main() {
     filterItems();
     getSearch();
     navBarScrolling();
-    overlay();
+    getItemInfos();
     getLocation();
     addGoogleMapsAPI();
     initMap();

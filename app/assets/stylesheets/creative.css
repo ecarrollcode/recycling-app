@@ -497,6 +497,10 @@ header .header-content .header-content-inner p {
   cursor: pointer;
 }
 
+.ui-helper-hidden-accessible { 
+  display:none;
+}
+
 
 
 /*ADDS BOX WHEN CLICKING ON INFO ICON*/
