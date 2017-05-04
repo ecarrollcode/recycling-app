@@ -1,6 +1,6 @@
 # TL;DR Recycling App
 
-TODO: Write a project description
+This is a web application aimed at providing localized recylcing information based on a user's current/inputted location. It provides them with information on each recyclable in their city, what bin it goes into, and what category of recyclables it falls under. Furthermore, they are able to get the locations of recylcing centers plotted on a map. There is also more information on the recycling categories provided as an overaly
 
 ## Installation
 
