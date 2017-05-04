@@ -44,9 +44,9 @@ You can use the map element (located in the third section of the homepage) to br
 
 ## Credits
 
-*Idea: Louis Spanias, Hixon Center for Sustainable Environmental Design
-*Development: Edward Carroll, Abigail Schantz, Pratyush Kapur, Evan Yates
-*Assistance: Yekaterina Kharitonova, Angela Zhou
+* Idea: Louis Spanias, Hixon Center for Sustainable Environmental Design
+* Development: Edward Carroll, Abigail Schantz, Pratyush Kapur, Evan Yates
+* Assistance: Yekaterina Kharitonova, Angela Zhou
 
 ## License
 
