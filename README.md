@@ -47,6 +47,7 @@ You can use the map element (located in the third section of the homepage) to br
 * Need more recycling centers in the database, only one searchable center currently
 * Be able to press enter when searching instead of only being able to click on search items
 * Refactor code to prefer IDs over classes
+* Filtering functionality needs improvement
 
 ## Credits
 
