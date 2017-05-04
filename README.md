@@ -7,8 +7,9 @@ This is a web application aimed at providing localized recycling information bas
 To install this app, do the following steps:
 1. Get the repository on your computer: `git clone https://github.com/ecarrollcode/recycling-app`
 2. In the recycling-app directory, run `bundle install`
-3. Run `rails db:setup`
-4. You are ready to run the app! To do this, type `rails s` and navigate to `localhost:3000` on your web browser. 
+3. Start the MySQL database by running `mysqld --skip-grant-tables`
+4. Run `rails db:setup`
+5. You are ready to run the app! To do this, type `rails s` and navigate to `localhost:3000` on your web browser. 
 
 ## Usage
 
@@ -35,6 +36,17 @@ You can use the map element (located in the third section of the homepage) to br
 * Use current location included
 * Informational overlays functional for all categories
 * Item overlays functional
+
+## Known Issues
+
+* Slideout issues in general
+* One of the cardboard slideouts has no text
+* Ghost text from slideout can be seen in page on load, changes size of screen to the right and looks completely jarbled
+* Admin updates to database should persist, no database being hosted beyond individual sessions right now
+* Need to get a domain and host webpage somewhere
+* Need more recycling centers in the database, only one searchable center currently
+* Be able to press enter when searching instead of only being able to click on search items
+* Shift code to prefer IDs over classes
 
 ## Credits
 
