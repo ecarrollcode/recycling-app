@@ -46,7 +46,7 @@ You can use the map element (located in the third section of the homepage) to br
 * Need to get a domain and host webpage somewhere
 * Need more recycling centers in the database, only one searchable center currently
 * Be able to press enter when searching instead of only being able to click on search items
-* Shift code to prefer IDs over classes
+* Refactor code to prefer IDs over classes
 
 ## Credits
 
