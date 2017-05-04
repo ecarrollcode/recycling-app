@@ -7,14 +7,8 @@ This is a web application aimed at providing localized recycling information bas
 To install this app, do the following steps:
 1. Get the repository on your computer: `git clone https://github.com/ecarrollcode/recycling-app`
 2. In the recycling-app directory, run `bundle install`
-3. Run `rails db:migrate`
-4. Run `rails db:drop`
-5. Run `rails db:setup`
-6. Run `mysqld`
-7. Start the MySQL database by running `mysqld --skip-grant-tables`
-8. Login to MySQL by doing `mysql -u root -p` and then typing in password
-9. Setup database with app by doing `rake db:migrate`
-10. You are ready to run the app! To do this, type `rails s` and navigate to `localhost:3000` on your web browser. 
+3. Run `rails db:setup`
+4. You are ready to run the app! To do this, type `rails s` and navigate to `localhost:3000` on your web browser. 
 
 ## Usage
 
